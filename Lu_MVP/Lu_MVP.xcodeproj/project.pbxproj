@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18CACD2B21782962003C8131 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD2A21782962003C8131 /* AppDelegate.m */; };
+		18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB5217E985A0096F82E /* LUSeverDelegate.m */; };
+		18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB8217E9A2B0096F82E /* LUSeviceManager.m */; };
+		18515EBC21813C7E0096F82E /* RootUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EBB21813C7E0096F82E /* RootUIService.m */; };
+		18515EBF218142DA0096F82E /* LUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EBE218142DA0096F82E /* LUAppDelegate.m */; };
+		18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18915ABF219AACBD0096452F /* MVPNavigationController.m */; };
+		18915AC4219BC93C0096452F /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 18915AC3219BC93C0096452F /* Utilities.m */; };
+		18915AC8219E51170096452F /* UIColor+categary.m in Sources */ = {isa = PBXBuildFile; fileRef = 18915AC7219E51160096452F /* UIColor+categary.m */; };
+		18A66059219967E0006296FD /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A66058219967E0006296FD /* BaseViewController.m */; };
+		18A6605C21996808006296FD /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605B21996808006296FD /* CenterViewController.m */; };
+		18A6605F21996822006296FD /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605E21996822006296FD /* CommunityViewController.m */; };
+		18A6606221996839006296FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6606121996839006296FD /* HomeViewController.m */; };
 		18CACD2E21782962003C8131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD2D21782962003C8131 /* ViewController.m */; };
 		18CACD3121782962003C8131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD2F21782962003C8131 /* Main.storyboard */; };
 		18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD3221782962003C8131 /* Lu_MVP.xcdatamodeld */; };
@@ -39,9 +49,29 @@
 
 /* Begin PBXFileReference section */
 		1045230E703B553E526EB9AD /* Pods-Lu_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lu_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Lu_MVP/Pods-Lu_MVP.debug.xcconfig"; sourceTree = "<group>"; };
+		18515EB4217E985A0096F82E /* LUSeverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeverDelegate.h; sourceTree = "<group>"; };
+		18515EB5217E985A0096F82E /* LUSeverDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUSeverDelegate.m; sourceTree = "<group>"; };
+		18515EB7217E9A2B0096F82E /* LUSeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeviceManager.h; sourceTree = "<group>"; };
+		18515EB8217E9A2B0096F82E /* LUSeviceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUSeviceManager.m; sourceTree = "<group>"; };
+		18515EBA21813C7E0096F82E /* RootUIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootUIService.h; sourceTree = "<group>"; };
+		18515EBB21813C7E0096F82E /* RootUIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootUIService.m; sourceTree = "<group>"; };
+		18515EBD218142DA0096F82E /* LUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUAppDelegate.h; sourceTree = "<group>"; };
+		18515EBE218142DA0096F82E /* LUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUAppDelegate.m; sourceTree = "<group>"; };
+		18915ABE219AACBD0096452F /* MVPNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPNavigationController.h; sourceTree = "<group>"; };
+		18915ABF219AACBD0096452F /* MVPNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPNavigationController.m; sourceTree = "<group>"; };
+		18915AC2219BC93C0096452F /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		18915AC3219BC93C0096452F /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		18915AC6219E51160096452F /* UIColor+categary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+categary.h"; sourceTree = "<group>"; };
+		18915AC7219E51160096452F /* UIColor+categary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+categary.m"; sourceTree = "<group>"; };
+		18A66057219967E0006296FD /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		18A66058219967E0006296FD /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		18A6605A21996808006296FD /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		18A6605B21996808006296FD /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		18A6605D21996822006296FD /* CommunityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityViewController.h; sourceTree = "<group>"; };
+		18A6605E21996822006296FD /* CommunityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
+		18A6606021996839006296FD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		18A6606121996839006296FD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		18CACD2621782962003C8131 /* Lu_MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lu_MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CACD2921782962003C8131 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		18CACD2A21782962003C8131 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18CACD2C21782962003C8131 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		18CACD2D21782962003C8131 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18CACD3021782962003C8131 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +118,173 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18046AEE21927D91003EF4F8 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				18046AF921927EEF003EF4F8 /* Center */,
+				18046AF421927E6C003EF4F8 /* Community */,
+				18046AEF21927DD0003EF4F8 /* Home */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		18046AEF21927DD0003EF4F8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18046AF321927E63003EF4F8 /* View */,
+				18046AF221927E3E003EF4F8 /* Presenter */,
+				18046AF121927E0D003EF4F8 /* Controller */,
+				18046AF021927DD9003EF4F8 /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		18046AF021927DD9003EF4F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18046AF121927E0D003EF4F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A6606021996839006296FD /* HomeViewController.h */,
+				18A6606121996839006296FD /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18046AF221927E3E003EF4F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18046AF321927E63003EF4F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18046AF421927E6C003EF4F8 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				18046AF821927EE2003EF4F8 /* Presenter */,
+				18046AF721927ED8003EF4F8 /* Model */,
+				18046AF621927EC9003EF4F8 /* Controller */,
+				18046AF521927EC2003EF4F8 /* View */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		18046AF521927EC2003EF4F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18046AF621927EC9003EF4F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A6605D21996822006296FD /* CommunityViewController.h */,
+				18A6605E21996822006296FD /* CommunityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18046AF721927ED8003EF4F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18046AF821927EE2003EF4F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18046AF921927EEF003EF4F8 /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				18046AFD21927F1F003EF4F8 /* Presenter */,
+				18046AFC21927F12003EF4F8 /* Model */,
+				18046AFB21927F05003EF4F8 /* Controller */,
+				18046AFA21927EFB003EF4F8 /* View */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		18046AFA21927EFB003EF4F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18046AFB21927F05003EF4F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A6605A21996808006296FD /* CenterViewController.h */,
+				18A6605B21996808006296FD /* CenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18046AFC21927F12003EF4F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18046AFD21927F1F003EF4F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		18515EB3217E96CA0096F82E /* Severs */ = {
+			isa = PBXGroup;
+			children = (
+				18515EB4217E985A0096F82E /* LUSeverDelegate.h */,
+				18515EB5217E985A0096F82E /* LUSeverDelegate.m */,
+				18515EB7217E9A2B0096F82E /* LUSeviceManager.h */,
+				18515EB8217E9A2B0096F82E /* LUSeviceManager.m */,
+				18515EBA21813C7E0096F82E /* RootUIService.h */,
+				18515EBB21813C7E0096F82E /* RootUIService.m */,
+				18515EBD218142DA0096F82E /* LUAppDelegate.h */,
+				18515EBE218142DA0096F82E /* LUAppDelegate.m */,
+			);
+			path = Severs;
+			sourceTree = "<group>";
+		};
+		18915AC1219BC9040096452F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				18915AC5219E50B70096452F /* Categarys */,
+				18915AC2219BC93C0096452F /* Utilities.h */,
+				18915AC3219BC93C0096452F /* Utilities.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		18915AC5219E50B70096452F /* Categarys */ = {
+			isa = PBXGroup;
+			children = (
+				18915AC6219E51160096452F /* UIColor+categary.h */,
+				18915AC7219E51160096452F /* UIColor+categary.m */,
+			);
+			path = Categarys;
+			sourceTree = "<group>";
+		};
 		18CACD1D21782962003C8131 = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +310,10 @@
 		18CACD2821782962003C8131 /* Lu_MVP */ = {
 			isa = PBXGroup;
 			children = (
+				18915AC1219BC9040096452F /* Tools */,
+				18046AEE21927D91003EF4F8 /* Section */,
+				18515EB3217E96CA0096F82E /* Severs */,
 				18CACD5E21787230003C8131 /* Base */,
-				18CACD2921782962003C8131 /* AppDelegate.h */,
-				18CACD2A21782962003C8131 /* AppDelegate.m */,
 				18CACD2C21782962003C8131 /* ViewController.h */,
 				18CACD2D21782962003C8131 /* ViewController.m */,
 				18CACD2F21782962003C8131 /* Main.storyboard */,
@@ -151,6 +349,10 @@
 			children = (
 				18CACD5F21787289003C8131 /* MVPTabBarController.h */,
 				18CACD6021787289003C8131 /* MVPTabBarController.m */,
+				18A66057219967E0006296FD /* BaseViewController.h */,
+				18A66058219967E0006296FD /* BaseViewController.m */,
+				18915ABE219AACBD0096452F /* MVPNavigationController.h */,
+				18915ABF219AACBD0096452F /* MVPNavigationController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -355,11 +557,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18915AC8219E51170096452F /* UIColor+categary.m in Sources */,
 				18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */,
+				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
+				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
 				18CACD2E21782962003C8131 /* ViewController.m in Sources */,
+				18A6605F21996822006296FD /* CommunityViewController.m in Sources */,
 				18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */,
+				18515EBC21813C7E0096F82E /* RootUIService.m in Sources */,
+				18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */,
+				18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */,
 				18CACD3C2178296C003C8131 /* main.m in Sources */,
-				18CACD2B21782962003C8131 /* AppDelegate.m in Sources */,
+				18515EBF218142DA0096F82E /* LUAppDelegate.m in Sources */,
+				18A6605C21996808006296FD /* CenterViewController.m in Sources */,
+				18915AC4219BC93C0096452F /* Utilities.m in Sources */,
+				18A6606221996839006296FD /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +744,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 694LG5K33D;
+				DEVELOPMENT_TEAM = S86CUP55US;
 				INFOPLIST_FILE = Lu_MVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,7 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 694LG5K33D;
+				DEVELOPMENT_TEAM = S86CUP55US;
 				INFOPLIST_FILE = Lu_MVP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

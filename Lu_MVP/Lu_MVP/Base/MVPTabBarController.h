@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MVPTabBarController : UITabBarController
-
+{
+     NSArray * ViewControllerArray;
+}
 @end
 
 NS_ASSUME_NONNULL_END

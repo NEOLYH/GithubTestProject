@@ -7,6 +7,10 @@
 //
 
 #import "MVPTabBarController.h"
+#import "CenterViewController.h"
+#import "HomeViewController.h"
+#import "CommunityViewController.h"
+#import "LUAppDelegate.h"
 
 @interface MVPTabBarController ()
 
@@ -16,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor redColor];
+    
 }
 
 @end
