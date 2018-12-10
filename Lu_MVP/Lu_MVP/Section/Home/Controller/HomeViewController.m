@@ -18,6 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor brownColor];
+    
+    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 110)];
+    button.center = self.view.center;
+    button.backgroundColor = [UIColor redColor];
+    [self.view addSubview:button];
+    [button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)go{
+    NSLog(@"456465456");
+    NSString *customURL = @"Lu_MVP://push/HomeDetailViewController?userId=99999&age=18";
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
 }
 
 /*

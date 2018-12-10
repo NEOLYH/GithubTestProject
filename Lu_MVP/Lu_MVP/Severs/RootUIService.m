@@ -19,6 +19,8 @@
 #import "MVPNavigationController.h"
 #import "UIColor+categary.h"
 #import "Utilities.h"
+#import "JLRoutes.h"
+#import <objc/runtime.h>
 
 @interface RootUIService ()
 {
@@ -47,10 +49,96 @@ ML_EXPORT_SERVICE(rootUI)
     {
         [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
+     [self jumpRoutes];
     
+    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
+        UIViewController *currentVc = [self currentViewController];
+        UIViewController *v = [[NSClassFromString(parameters[@"controller"]) alloc] init];
+        [self paramToVc:v param:parameters];
+        [currentVc.navigationController pushViewController:v animated:YES];
+        return YES;
+    }];
     [self runApp];
     
     return YES;
+}
+
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return [[JLRoutes routesForScheme:@"Lu_MVP"] routeURL:url];
+}
+
+-(void)jumpRoutes{
+    
+//    //    app启动时资源占用率大，如果不异步执行，openUrl会延迟大约10s才被执行
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0),^{
+//        NSString *customURL = @"Lu_MVP://Tabbar/CenterViewController/CommunityViewController/HomeViewController";
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
+//        });
+//    });
+//
+    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/:tab" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        return YES;
+    }];
+//
+    //    navigation Push规则
+    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
+        UIViewController *currentVc = [self currentViewController];
+        UIViewController *v = [[NSClassFromString(parameters[@"controller"]) alloc] init];
+        [self paramToVc:v param:parameters];
+        [currentVc.navigationController pushViewController:v animated:YES];
+        return YES;
+    }];
+    
+//    //    StoryBoard Push规则
+//    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/StoryBoardPush" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
+//        UIViewController *currentVc = [self currentViewController];
+//        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:parameters[@"sbname"] bundle:nil];
+//        UIViewController *v  = [storyboard instantiateViewControllerWithIdentifier:parameters[@"bundleid"]];
+//        [self paramToVc:v param:parameters];
+//        [currentVc.navigationController pushViewController:v animated:YES];
+//        return YES;
+//    }];
+}
+
+-(void)paramToVc:(UIViewController *) v param:(NSDictionary<NSString *,NSString *> *)parameters{
+    //        runtime将参数传递至需要跳转的控制器
+    unsigned int outCount = 0;
+    objc_property_t * properties = class_copyPropertyList(v.class , &outCount);
+    for (int i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        NSString *key = [NSString stringWithUTF8String:property_getName(property)];
+        NSString *param = parameters[key];
+        if (param != nil) {
+            [v setValue:param forKey:key];
+        }
+    }
+}
+
+/**
+ *          获取当前控制器
+ */
+-(UIViewController *)currentViewController{
+    
+    UIViewController * currVC = nil;
+    UIViewController * Rootvc = self.window.rootViewController ;
+    do {
+        if ([Rootvc isKindOfClass:[UINavigationController class]]) {
+            UINavigationController * nav = (UINavigationController *)Rootvc;
+            UIViewController * v = [nav.viewControllers lastObject];
+            currVC = v;
+            Rootvc = v.presentedViewController;
+            continue;
+        }else if([Rootvc isKindOfClass:[UITabBarController class]]){
+            UITabBarController * tabVC = (UITabBarController *)Rootvc;
+            currVC = tabVC;
+            Rootvc = [tabVC.viewControllers objectAtIndex:tabVC.selectedIndex];
+            continue;
+        }
+    } while (Rootvc!=nil);
+    
+    return currVC;
 }
 
 -(void)runApp{
@@ -68,6 +156,19 @@ ML_EXPORT_SERVICE(rootUI)
     LUAppDelegate * delegate          = (LUAppDelegate*)[UIApplication sharedApplication].delegate;
     delegate.customTabBarController.tabBar.hidden = NO;
     delegate.window.rootViewController  = delegate.customTabBarController;
+}
+
+- (void)showHome
+{
+    // 首页
+    LUAppDelegate *appDelegate = (LUAppDelegate *)[UIApplication sharedApplication].delegate;
+     MVPTabBarController * customTabBarController = [appDelegate customTabBarController];
+    for (int i = 0; i < appDelegate.customTabBarController.viewControllers.count; i++) {
+        UINavigationController *nav =
+        [appDelegate.customTabBarController.viewControllers objectAtIndex:i];
+        [nav popToRootViewControllerAnimated:NO];
+    }
+    customTabBarController.selectedIndex = 0;
 }
 
 #pragma mark - tab

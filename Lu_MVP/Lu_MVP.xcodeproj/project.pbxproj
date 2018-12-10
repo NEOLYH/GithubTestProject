@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18137B6E21ABC8AA0069CB55 /* LUInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B6D21ABC8AA0069CB55 /* LUInteractiveTransition.m */; };
+		18137B7121ABD8E60069CB55 /* LUTranstionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B7021ABD8E60069CB55 /* LUTranstionAnimator.m */; };
+		18137B7421ABE3E10069CB55 /* CircleSpreadAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B7321ABE3E10069CB55 /* CircleSpreadAnimator.m */; };
+		18137B9121B0DC450069CB55 /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8521B0DC440069CB55 /* JLRoutes.m */; };
+		18137B9221B0DC450069CB55 /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8621B0DC440069CB55 /* JLRRouteRequest.m */; };
+		18137B9321B0DC450069CB55 /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8721B0DC440069CB55 /* JLRRouteDefinition.m */; };
+		18137B9421B0DC450069CB55 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8921B0DC440069CB55 /* JLRParsingUtilities.m */; };
+		18137B9521B0DC450069CB55 /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8A21B0DC440069CB55 /* JLRRouteResponse.m */; };
+		18137B9621B0DC450069CB55 /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 18137B8D21B0DC450069CB55 /* JLRRouteHandler.m */; };
+		183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183BD70321B132E30019419B /* HomeDetailViewController.m */; };
 		18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB5217E985A0096F82E /* LUSeverDelegate.m */; };
 		18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB8217E9A2B0096F82E /* LUSeviceManager.m */; };
 		18515EBC21813C7E0096F82E /* RootUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EBB21813C7E0096F82E /* RootUIService.m */; };
@@ -49,6 +59,26 @@
 
 /* Begin PBXFileReference section */
 		1045230E703B553E526EB9AD /* Pods-Lu_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lu_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Lu_MVP/Pods-Lu_MVP.debug.xcconfig"; sourceTree = "<group>"; };
+		18137B6C21ABC8AA0069CB55 /* LUInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUInteractiveTransition.h; sourceTree = "<group>"; };
+		18137B6D21ABC8AA0069CB55 /* LUInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUInteractiveTransition.m; sourceTree = "<group>"; };
+		18137B6F21ABD8E60069CB55 /* LUTranstionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUTranstionAnimator.h; sourceTree = "<group>"; };
+		18137B7021ABD8E60069CB55 /* LUTranstionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUTranstionAnimator.m; sourceTree = "<group>"; };
+		18137B7221ABE3E10069CB55 /* CircleSpreadAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleSpreadAnimator.h; sourceTree = "<group>"; };
+		18137B7321ABE3E10069CB55 /* CircleSpreadAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleSpreadAnimator.m; sourceTree = "<group>"; };
+		18137B8521B0DC440069CB55 /* JLRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRoutes.m; sourceTree = "<group>"; };
+		18137B8621B0DC440069CB55 /* JLRRouteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteRequest.m; sourceTree = "<group>"; };
+		18137B8721B0DC440069CB55 /* JLRRouteDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteDefinition.m; sourceTree = "<group>"; };
+		18137B8821B0DC440069CB55 /* JLRParsingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRParsingUtilities.h; sourceTree = "<group>"; };
+		18137B8921B0DC440069CB55 /* JLRParsingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRParsingUtilities.m; sourceTree = "<group>"; };
+		18137B8A21B0DC440069CB55 /* JLRRouteResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteResponse.m; sourceTree = "<group>"; };
+		18137B8B21B0DC440069CB55 /* JLRRouteHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteHandler.h; sourceTree = "<group>"; };
+		18137B8C21B0DC450069CB55 /* JLRoutes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRoutes.h; sourceTree = "<group>"; };
+		18137B8D21B0DC450069CB55 /* JLRRouteHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteHandler.m; sourceTree = "<group>"; };
+		18137B8E21B0DC450069CB55 /* JLRRouteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteRequest.h; sourceTree = "<group>"; };
+		18137B8F21B0DC450069CB55 /* JLRRouteDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteDefinition.h; sourceTree = "<group>"; };
+		18137B9021B0DC450069CB55 /* JLRRouteResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLRRouteResponse.h; sourceTree = "<group>"; };
+		183BD70221B132E30019419B /* HomeDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		183BD70321B132E30019419B /* HomeDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		18515EB4217E985A0096F82E /* LUSeverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeverDelegate.h; sourceTree = "<group>"; };
 		18515EB5217E985A0096F82E /* LUSeverDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUSeverDelegate.m; sourceTree = "<group>"; };
 		18515EB7217E9A2B0096F82E /* LUSeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeviceManager.h; sourceTree = "<group>"; };
@@ -151,6 +181,8 @@
 			children = (
 				18A6606021996839006296FD /* HomeViewController.h */,
 				18A6606121996839006296FD /* HomeViewController.m */,
+				183BD70221B132E30019419B /* HomeDetailViewController.h */,
+				183BD70321B132E30019419B /* HomeDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +283,38 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		18137B6B21ABC7060069CB55 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				18137B6C21ABC8AA0069CB55 /* LUInteractiveTransition.h */,
+				18137B6D21ABC8AA0069CB55 /* LUInteractiveTransition.m */,
+				18137B6F21ABD8E60069CB55 /* LUTranstionAnimator.h */,
+				18137B7021ABD8E60069CB55 /* LUTranstionAnimator.m */,
+				18137B7221ABE3E10069CB55 /* CircleSpreadAnimator.h */,
+				18137B7321ABE3E10069CB55 /* CircleSpreadAnimator.m */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		18137B8421B0DBA40069CB55 /* Unities */ = {
+			isa = PBXGroup;
+			children = (
+				18137B8C21B0DC450069CB55 /* JLRoutes.h */,
+				18137B8521B0DC440069CB55 /* JLRoutes.m */,
+				18137B8821B0DC440069CB55 /* JLRParsingUtilities.h */,
+				18137B8921B0DC440069CB55 /* JLRParsingUtilities.m */,
+				18137B8F21B0DC450069CB55 /* JLRRouteDefinition.h */,
+				18137B8721B0DC440069CB55 /* JLRRouteDefinition.m */,
+				18137B8B21B0DC440069CB55 /* JLRRouteHandler.h */,
+				18137B8D21B0DC450069CB55 /* JLRRouteHandler.m */,
+				18137B8E21B0DC450069CB55 /* JLRRouteRequest.h */,
+				18137B8621B0DC440069CB55 /* JLRRouteRequest.m */,
+				18137B9021B0DC450069CB55 /* JLRRouteResponse.h */,
+				18137B8A21B0DC440069CB55 /* JLRRouteResponse.m */,
+			);
+			path = Unities;
+			sourceTree = "<group>";
+		};
 		18515EB3217E96CA0096F82E /* Severs */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +333,7 @@
 		18915AC1219BC9040096452F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18915ACA219E72210096452F /* Lu_Transition */,
 				18915AC5219E50B70096452F /* Categarys */,
 				18915AC2219BC93C0096452F /* Utilities.h */,
 				18915AC3219BC93C0096452F /* Utilities.m */,
@@ -283,6 +348,13 @@
 				18915AC7219E51160096452F /* UIColor+categary.m */,
 			);
 			path = Categarys;
+			sourceTree = "<group>";
+		};
+		18915ACA219E72210096452F /* Lu_Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lu_Transition;
 			sourceTree = "<group>";
 		};
 		18CACD1D21782962003C8131 = {
@@ -310,6 +382,8 @@
 		18CACD2821782962003C8131 /* Lu_MVP */ = {
 			isa = PBXGroup;
 			children = (
+				18137B8421B0DBA40069CB55 /* Unities */,
+				18137B6B21ABC7060069CB55 /* Transition */,
 				18915AC1219BC9040096452F /* Tools */,
 				18046AEE21927D91003EF4F8 /* Section */,
 				18515EB3217E96CA0096F82E /* Severs */,
@@ -560,17 +634,27 @@
 				18915AC8219E51170096452F /* UIColor+categary.m in Sources */,
 				18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */,
 				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
+				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
 				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
+				18137B9421B0DC450069CB55 /* JLRParsingUtilities.m in Sources */,
+				18137B9521B0DC450069CB55 /* JLRRouteResponse.m in Sources */,
 				18CACD2E21782962003C8131 /* ViewController.m in Sources */,
+				18137B9321B0DC450069CB55 /* JLRRouteDefinition.m in Sources */,
+				18137B7421ABE3E10069CB55 /* CircleSpreadAnimator.m in Sources */,
 				18A6605F21996822006296FD /* CommunityViewController.m in Sources */,
+				18137B9121B0DC450069CB55 /* JLRoutes.m in Sources */,
 				18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */,
 				18515EBC21813C7E0096F82E /* RootUIService.m in Sources */,
+				18137B7121ABD8E60069CB55 /* LUTranstionAnimator.m in Sources */,
 				18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */,
 				18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */,
 				18CACD3C2178296C003C8131 /* main.m in Sources */,
+				18137B9621B0DC450069CB55 /* JLRRouteHandler.m in Sources */,
 				18515EBF218142DA0096F82E /* LUAppDelegate.m in Sources */,
 				18A6605C21996808006296FD /* CenterViewController.m in Sources */,
+				18137B9221B0DC450069CB55 /* JLRRouteRequest.m in Sources */,
 				18915AC4219BC93C0096452F /* Utilities.m in Sources */,
+				18137B6E21ABC8AA0069CB55 /* LUInteractiveTransition.m in Sources */,
 				18A6606221996839006296FD /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
