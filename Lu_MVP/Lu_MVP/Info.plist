@@ -12,10 +12,12 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>lululu</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>RootMvp</string>
+				<string>LUMVPOne</string>
+				<string>LUMVPTwo</string>
+				<string>LUMVPThree</string>
 			</array>
 		</dict>
 	</array>
@@ -38,6 +40,10 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string></string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

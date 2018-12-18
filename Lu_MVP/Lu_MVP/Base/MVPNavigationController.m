@@ -9,38 +9,29 @@
 #import "MVPNavigationController.h"
 #import "LUAppDelegate.h"
 
+@interface MVPNavigationController ()<UIGestureRecognizerDelegate>
+
+@end
+
 @implementation MVPNavigationController
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (animated) {
-        
-        if (![LUAppDelegate getRootUIService].shouldIgnorePushingViewControllers) {
-            
-            [super pushViewController:viewController animated:animated];
-        }
-        
-        [LUAppDelegate getRootUIService].shouldIgnorePushingViewControllers = YES;
+    if (self.childViewControllers.count > 0) {
+        NSString *title = @"";
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+        viewController.navigationItem.leftBarButtonItem.image = [UIImage imageNamed:@"back"];
+        [viewController.navigationItem.leftBarButtonItem setTintColor:[UIColor blackColor]];
+        viewController.hidesBottomBarWhenPushed = YES;
     }
-    else {
-        
-        [super pushViewController:viewController animated:animated];
-    }
+    [super pushViewController:viewController animated:animated];
 }
 
-- (UIViewController *)popViewControllerAnimated:(BOOL)animated {
-    
-    return [super popViewControllerAnimated:animated];
+-(void)goBack{
+    [self popViewControllerAnimated:YES];
 }
 
-- (NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
-    return [super popToViewController:viewController animated:animated];
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return self.childViewControllers.count > 1;
 }
-
-- (NSArray *)popToRootViewControllerAnimated:(BOOL)animated {
-    
-    return [super popToRootViewControllerAnimated:animated];
-}
-
 @end

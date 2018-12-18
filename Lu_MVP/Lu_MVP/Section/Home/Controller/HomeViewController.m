@@ -28,9 +28,16 @@
 
 -(void)go{
     NSLog(@"456465456");
-    NSString *customURL = @"Lu_MVP://push/HomeDetailViewController?userId=99999&age=18";
+
+    NSString * url = JLRoutesJumpUrl(@"LUMVPOne", @"HomeDetailViewController", @"123", nil, nil, nil);
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
+    if (@available(iOS 10.0, *)) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{} completionHandler:nil];
+    } else {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    }
+    
+    
 }
 
 /*

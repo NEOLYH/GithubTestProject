@@ -12,7 +12,7 @@
 
 #import "JLRoutes.h"
 #import "JLRRouteDefinition.h"
-#import "JLRParsingUtilities.h"
+#import "JLROptionalRouteParser.h"
 
 
 NSString *const JLRoutePatternKey = @"JLRoutePattern";
@@ -22,22 +22,15 @@ NSString *const JLRouteWildcardComponentsKey = @"JLRouteWildcardComponents";
 NSString *const JLRoutesGlobalRoutesScheme = @"JLRoutesGlobalRoutesScheme";
 
 
-static NSMutableDictionary *JLRGlobal_routeControllersMap = nil;
-
-
-// global options (configured in +initialize)
-static BOOL JLRGlobal_verboseLoggingEnabled;
-static BOOL JLRGlobal_shouldDecodePlusSymbols;
-static BOOL JLRGlobal_alwaysTreatsHostAsPathComponent;
-static Class JLRGlobal_routeDefinitionClass;
+static NSMutableDictionary *routeControllersMap = nil;
+static BOOL verboseLoggingEnabled = NO;
+static BOOL shouldDecodePlusSymbols = YES;
 
 
 @interface JLRoutes ()
 
-@property (nonatomic, strong) NSMutableArray *mutableRoutes;
+@property (nonatomic, strong) NSMutableArray *routes;
 @property (nonatomic, strong) NSString *scheme;
-
-- (JLRRouteRequestOptions)_routeRequestOptions;
 
 @end
 
@@ -46,40 +39,29 @@ static Class JLRGlobal_routeDefinitionClass;
 
 @implementation JLRoutes
 
-+ (void)initialize
-{
-    if (self == [JLRoutes class]) {
-        // Set default global options
-        JLRGlobal_verboseLoggingEnabled = NO;
-        JLRGlobal_shouldDecodePlusSymbols = YES;
-        JLRGlobal_alwaysTreatsHostAsPathComponent = NO;
-        JLRGlobal_routeDefinitionClass = [JLRRouteDefinition class];
-    }
-}
-
 - (instancetype)init
 {
     if ((self = [super init])) {
-        self.mutableRoutes = [NSMutableArray array];
+        self.routes = [NSMutableArray array];
     }
     return self;
 }
 
 - (NSString *)description
 {
-    return [self.mutableRoutes description];
+    return [self.routes description];
 }
 
-+ (NSDictionary <NSString *, NSArray <JLRRouteDefinition *> *> *)allRoutes;
++ (NSString *)allRoutes
 {
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    NSMutableString *descriptionString = [NSMutableString stringWithString:@"\n"];
     
-    for (NSString *namespace in [JLRGlobal_routeControllersMap copy]) {
-        JLRoutes *routesController = JLRGlobal_routeControllersMap[namespace];
-        dictionary[namespace] = [routesController.mutableRoutes copy];
+    for (NSString *routesNamespace in routeControllersMap) {
+        JLRoutes *routesController = routeControllersMap[routesNamespace];
+        [descriptionString appendFormat:@"\"%@\":\n%@\n\n", routesController.scheme, routesController.routes];
     }
     
-    return [dictionary copy];
+    return descriptionString;
 }
 
 
@@ -96,37 +78,32 @@ static Class JLRGlobal_routeDefinitionClass;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        JLRGlobal_routeControllersMap = [[NSMutableDictionary alloc] init];
+        routeControllersMap = [[NSMutableDictionary alloc] init];
     });
     
-    if (!JLRGlobal_routeControllersMap[scheme]) {
+    if (!routeControllersMap[scheme]) {
         routesController = [[self alloc] init];
         routesController.scheme = scheme;
-        JLRGlobal_routeControllersMap[scheme] = routesController;
+        routeControllersMap[scheme] = routesController;
     }
     
-    routesController = JLRGlobal_routeControllersMap[scheme];
+    routesController = routeControllersMap[scheme];
     
     return routesController;
 }
 
 + (void)unregisterRouteScheme:(NSString *)scheme
 {
-    [JLRGlobal_routeControllersMap removeObjectForKey:scheme];
+    [routeControllersMap removeObjectForKey:scheme];
 }
 
 + (void)unregisterAllRouteSchemes
 {
-    [JLRGlobal_routeControllersMap removeAllObjects];
+    [routeControllersMap removeAllObjects];
 }
 
 
 #pragma mark - Registering Routes
-
-- (void)addRoute:(JLRRouteDefinition *)routeDefinition
-{
-    [self _registerRoute:routeDefinition];
-}
 
 - (void)addRoute:(NSString *)routePattern handler:(BOOL (^)(NSDictionary<NSString *, id> *parameters))handlerBlock
 {
@@ -142,33 +119,30 @@ static Class JLRGlobal_routeDefinitionClass;
 
 - (void)addRoute:(NSString *)routePattern priority:(NSUInteger)priority handler:(BOOL (^)(NSDictionary<NSString *, id> *parameters))handlerBlock
 {
-    NSArray <NSString *> *optionalRoutePatterns = [JLRParsingUtilities expandOptionalRoutePatternsForPattern:routePattern];
-    JLRRouteDefinition *route = [[JLRGlobal_routeDefinitionClass alloc] initWithPattern:routePattern priority:priority handlerBlock:handlerBlock];
+    NSArray <NSString *> *optionalRoutePatterns = [JLROptionalRouteParser expandOptionalRoutePatternsForPattern:routePattern];
     
     if (optionalRoutePatterns.count > 0) {
         // there are optional params, parse and add them
-        for (NSString *pattern in optionalRoutePatterns) {
-            JLRRouteDefinition *optionalRoute = [[JLRGlobal_routeDefinitionClass alloc] initWithPattern:pattern priority:priority handlerBlock:handlerBlock];
-            [self _registerRoute:optionalRoute];
-            [self _verboseLog:@"Automatically created optional route: %@", optionalRoute];
+        for (NSString *route in optionalRoutePatterns) {
+            [self _verboseLog:@"Automatically created optional route: %@", route];
+            [self _registerRoute:route priority:priority handler:handlerBlock];
         }
         return;
     }
     
-    [self _registerRoute:route];
+    [self _registerRoute:routePattern priority:priority handler:handlerBlock];
 }
 
-- (void)removeRoute:(JLRRouteDefinition *)routeDefinition
+- (void)removeRoute:(NSString *)routePattern
 {
-    [self.mutableRoutes removeObject:routeDefinition];
-}
-
-- (void)removeRouteWithPattern:(NSString *)routePattern
-{   
+    if (![routePattern hasPrefix:@"/"]) {
+        routePattern = [NSString stringWithFormat:@"/%@", routePattern];
+    }
+    
     NSInteger routeIndex = NSNotFound;
     NSInteger index = 0;
     
-    for (JLRRouteDefinition *route in [self.mutableRoutes copy]) {
+    for (JLRRouteDefinition *route in [self.routes copy]) {
         if ([route.pattern isEqualToString:routePattern]) {
             routeIndex = index;
             break;
@@ -177,13 +151,13 @@ static Class JLRGlobal_routeDefinitionClass;
     }
     
     if (routeIndex != NSNotFound) {
-        [self.mutableRoutes removeObjectAtIndex:(NSUInteger)routeIndex];
+        [self.routes removeObjectAtIndex:(NSUInteger)routeIndex];
     }
 }
 
 - (void)removeAllRoutes
 {
-    [self.mutableRoutes removeAllObjects];
+    [self.routes removeAllObjects];
 }
 
 - (void)setObject:(id)handlerBlock forKeyedSubscript:(NSString *)routePatten
@@ -191,10 +165,6 @@ static Class JLRGlobal_routeDefinitionClass;
     [self addRoute:routePatten handler:handlerBlock];
 }
 
-- (NSArray <JLRRouteDefinition *> *)routes;
-{
-    return [self.mutableRoutes copy];
-}
 
 #pragma mark - Routing URLs
 
@@ -237,22 +207,24 @@ static Class JLRGlobal_routeDefinitionClass;
         return nil;
     }
     
-    return JLRGlobal_routeControllersMap[URL.scheme] ?: [JLRoutes globalRoutes];
+    return routeControllersMap[URL.scheme] ?: [JLRoutes globalRoutes];
 }
 
-- (void)_registerRoute:(JLRRouteDefinition *)route
+- (void)_registerRoute:(NSString *)routePattern priority:(NSUInteger)priority handler:(BOOL (^)(NSDictionary *parameters))handlerBlock
 {
-    if (route.priority == 0 || self.mutableRoutes.count == 0) {
-        [self.mutableRoutes addObject:route];
+    JLRRouteDefinition *route = [[JLRRouteDefinition alloc] initWithScheme:self.scheme pattern:routePattern priority:priority handlerBlock:handlerBlock];
+    
+    if (priority == 0 || self.routes.count == 0) {
+        [self.routes addObject:route];
     } else {
         NSUInteger index = 0;
         BOOL addedRoute = NO;
         
         // search through existing routes looking for a lower priority route than this one
-        for (JLRRouteDefinition *existingRoute in [self.mutableRoutes copy]) {
-            if (existingRoute.priority < route.priority) {
+        for (JLRRouteDefinition *existingRoute in [self.routes copy]) {
+            if (existingRoute.priority < priority) {
                 // if found, add the route after it
-                [self.mutableRoutes insertObject:route atIndex:index];
+                [self.routes insertObject:route atIndex:index];
                 addedRoute = YES;
                 break;
             }
@@ -261,11 +233,9 @@ static Class JLRGlobal_routeDefinitionClass;
         
         // if we weren't able to find a lower priority route, this is the new lowest priority route (or same priority as self.routes.lastObject) and should just be added
         if (!addedRoute) {
-            [self.mutableRoutes addObject:route];
+            [self.routes addObject:route];
         }
     }
-    
-    [route didBecomeRegisteredForScheme:self.scheme];
 }
 
 - (BOOL)_routeURL:(NSURL *)URL withParameters:(NSDictionary *)parameters executeRouteBlock:(BOOL)executeRouteBlock
@@ -277,13 +247,11 @@ static Class JLRGlobal_routeDefinitionClass;
     [self _verboseLog:@"Trying to route URL %@", URL];
     
     BOOL didRoute = NO;
+    JLRRouteRequest *request = [[JLRRouteRequest alloc] initWithURL:URL];
     
-    JLRRouteRequestOptions options = [self _routeRequestOptions];
-    JLRRouteRequest *request = [[JLRRouteRequest alloc] initWithURL:URL options:options additionalParameters:parameters];
-    
-    for (JLRRouteDefinition *route in [self.mutableRoutes copy]) {
+    for (JLRRouteDefinition *route in [self.routes copy]) {
         // check each route for a matching response
-        JLRRouteResponse *response = [route routeResponseForRequest:request];
+        JLRRouteResponse *response = [route routeResponseForRequest:request decodePlusSymbols:shouldDecodePlusSymbols];
         if (!response.isMatch) {
             continue;
         }
@@ -295,13 +263,16 @@ static Class JLRGlobal_routeDefinitionClass;
             return YES;
         }
         
-        [self _verboseLog:@"Match parameters are %@", response.parameters];
+        // configure the final parameters
+        NSMutableDictionary *finalParameters = [NSMutableDictionary dictionary];
+        [finalParameters addEntriesFromDictionary:response.parameters];
+        [finalParameters addEntriesFromDictionary:parameters];
+        [self _verboseLog:@"Final parameters are %@", finalParameters];
         
-        // Call the handler block
-        didRoute = [route callHandlerBlockWithParameters:response.parameters];
+        didRoute = [route callHandlerBlockWithParameters:finalParameters];
         
         if (didRoute) {
-            // if it was routed successfully, we're done - otherwise, continue trying to route
+            // if it was routed successfully, we're done
             break;
         }
     }
@@ -332,7 +303,7 @@ static Class JLRGlobal_routeDefinitionClass;
 
 - (void)_verboseLog:(NSString *)format, ...
 {
-    if (!JLRGlobal_verboseLoggingEnabled || format.length == 0) {
+    if (!verboseLoggingEnabled || format.length == 0) {
         return;
     }
     
@@ -347,20 +318,6 @@ static Class JLRGlobal_routeDefinitionClass;
     NSLog(@"[JLRoutes]: %@", formattedLogMessage);
 }
 
-- (JLRRouteRequestOptions)_routeRequestOptions
-{
-    JLRRouteRequestOptions options = JLRRouteRequestOptionsNone;
-    
-    if (JLRGlobal_shouldDecodePlusSymbols) {
-        options |= JLRRouteRequestOptionDecodePlusSymbols;
-    }
-    if (JLRGlobal_alwaysTreatsHostAsPathComponent) {
-        options |= JLRRouteRequestOptionTreatHostAsPathComponent;
-    }
-    
-    return options;
-}
-
 @end
 
 
@@ -370,43 +327,22 @@ static Class JLRGlobal_routeDefinitionClass;
 
 + (void)setVerboseLoggingEnabled:(BOOL)loggingEnabled
 {
-    JLRGlobal_verboseLoggingEnabled = loggingEnabled;
+    verboseLoggingEnabled = loggingEnabled;
 }
 
 + (BOOL)isVerboseLoggingEnabled
 {
-    return JLRGlobal_verboseLoggingEnabled;
+    return verboseLoggingEnabled;
 }
 
 + (void)setShouldDecodePlusSymbols:(BOOL)shouldDecode
 {
-    JLRGlobal_shouldDecodePlusSymbols = shouldDecode;
+    shouldDecodePlusSymbols = shouldDecode;
 }
 
 + (BOOL)shouldDecodePlusSymbols
 {
-    return JLRGlobal_shouldDecodePlusSymbols;
-}
-
-+ (void)setAlwaysTreatsHostAsPathComponent:(BOOL)treatsHostAsPathComponent
-{
-    JLRGlobal_alwaysTreatsHostAsPathComponent = treatsHostAsPathComponent;
-}
-
-+ (BOOL)alwaysTreatsHostAsPathComponent
-{
-    return JLRGlobal_alwaysTreatsHostAsPathComponent;
-}
-
-+ (void)setDefaultRouteDefinitionClass:(Class)routeDefinitionClass
-{
-    NSParameterAssert([routeDefinitionClass isSubclassOfClass:[JLRRouteDefinition class]]);
-    JLRGlobal_routeDefinitionClass = routeDefinitionClass;
-}
-
-+ (Class)defaultRouteDefinitionClass
-{
-    return JLRGlobal_routeDefinitionClass;
+    return shouldDecodePlusSymbols;
 }
 
 @end
@@ -414,14 +350,15 @@ static Class JLRGlobal_routeDefinitionClass;
 
 #pragma mark - Deprecated
 
+// deprecated
 NSString *const kJLRoutePatternKey = @"JLRoutePattern";
 NSString *const kJLRouteURLKey = @"JLRouteURL";
 NSString *const kJLRouteSchemeKey = @"JLRouteScheme";
 NSString *const kJLRouteWildcardComponentsKey = @"JLRouteWildcardComponents";
 NSString *const kJLRoutesGlobalRoutesScheme = @"JLRoutesGlobalRoutesScheme";
-NSString *const kJLRouteNamespaceKey = @"JLRouteScheme";
-NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalRoutesScheme";
 
+NSString *const kJLRouteNamespaceKey = @"JLRouteScheme"; // deprecated
+NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalRoutesScheme"; // deprecated
 
 @implementation JLRoutes (Deprecated)
 
@@ -442,7 +379,7 @@ NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalRoutesScheme";
 
 + (void)removeRoute:(NSString *)routePattern
 {
-    [[self globalRoutes] removeRouteWithPattern:routePattern];
+    [[self globalRoutes] removeRoute:routePattern];
 }
 
 + (void)removeAllRoutes

@@ -15,29 +15,22 @@
 
 @interface JLRRouteRequest ()
 
-@property (nonatomic, copy) NSURL *URL;
+@property (nonatomic, strong) NSURL *URL;
 @property (nonatomic, strong) NSArray *pathComponents;
 @property (nonatomic, strong) NSDictionary *queryParams;
-@property (nonatomic, assign) JLRRouteRequestOptions options;
-@property (nonatomic, copy) NSDictionary *additionalParameters;
 
 @end
 
 
 @implementation JLRRouteRequest
 
-- (instancetype)initWithURL:(NSURL *)URL options:(JLRRouteRequestOptions)options additionalParameters:(nullable NSDictionary *)additionalParameters
+- (instancetype)initWithURL:(NSURL *)URL
 {
     if ((self = [super init])) {
         self.URL = URL;
-        self.options = options;
-        self.additionalParameters = additionalParameters;
-        
-        BOOL treatsHostAsPathComponent = ((options & JLRRouteRequestOptionTreatHostAsPathComponent) == JLRRouteRequestOptionTreatHostAsPathComponent);
         
         NSURLComponents *components = [NSURLComponents componentsWithString:[self.URL absoluteString]];
-        
-        if (components.host.length > 0 && (treatsHostAsPathComponent || (![components.host isEqualToString:@"localhost"] && [components.host rangeOfString:@"."].location == NSNotFound))) {
+        if (components.host.length > 0 && ![components.host isEqualToString:@"localhost"]) {
             // convert the host to "/" so that the host is considered a path component
             NSString *host = [components.percentEncodedHost copy];
             components.host = @"/";
@@ -109,6 +102,42 @@
         self.queryParams = [queryParams copy];
     }
     return self;
+}
+
++ (NSString *)variableValueFrom:(NSString *)value decodePlusSymbols:(BOOL)decodePlusSymbols;
+{
+    if (!decodePlusSymbols) {
+        return value;
+    }
+    return [value stringByReplacingOccurrencesOfString:@"+" withString:@" " options:NSLiteralSearch range:NSMakeRange(0, value.length)];
+}
+
+- (NSDictionary *)queryParamsDecodingPlusSymbols:(BOOL)decodePlusSymbols;
+{
+    if (!decodePlusSymbols) {
+        return self.queryParams;
+    }
+    
+    NSMutableDictionary *updatedQueryParams = [NSMutableDictionary dictionary];
+    
+    for (NSString *name in self.queryParams) {
+        id value = self.queryParams[name];
+        
+        if ([value isKindOfClass:[NSArray class]]) {
+            NSMutableArray *variables = [NSMutableArray array];
+            for (NSString *arrayValue in (NSArray *)value) {
+                [variables addObject:[[self class] variableValueFrom:arrayValue decodePlusSymbols:decodePlusSymbols]];
+            }
+            updatedQueryParams[name] = [variables copy];
+        } else if ([value isKindOfClass:[NSString class]]) {
+            NSString *variable = [[self class] variableValueFrom:value decodePlusSymbols:decodePlusSymbols];
+            updatedQueryParams[name] = variable;
+        } else {
+            NSAssert(NO, @"Unexpected query parameter type: %@", NSStringFromClass([value class]));
+        }
+    }
+    
+    return [updatedQueryParams copy];
 }
 
 - (NSString *)description

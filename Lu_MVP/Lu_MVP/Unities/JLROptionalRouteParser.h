@@ -10,30 +10,16 @@
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "JLRRouteHandler.h"
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 
-@implementation JLRRouteHandler
+@interface JLROptionalRouteParser : NSObject
 
-+ (BOOL (^)(NSDictionary<NSString *, id> *parameters))handlerBlockForWeakTarget:(__weak id <JLRRouteHandlerTarget>)weakTarget
-{
-    NSParameterAssert([weakTarget respondsToSelector:@selector(handleRouteWithParameters:)]);
-    
-    return ^BOOL(NSDictionary<NSString *, id> *parameters) {
-        return [weakTarget handleRouteWithParameters:parameters];
-    };
-}
-
-+ (BOOL (^)(NSDictionary<NSString *, id> *parameters))handlerBlockForTargetClass:(Class)targetClass completion:(BOOL (^)(id <JLRRouteHandlerTarget> createdObject))completionHandler
-{
-    NSParameterAssert([targetClass conformsToProtocol:@protocol(JLRRouteHandlerTarget)]);
-    NSParameterAssert([targetClass instancesRespondToSelector:@selector(initWithRouteParameters:)]);
-    NSParameterAssert(completionHandler != nil); // we want to force external ownership of the newly created object by handing it back.
-    
-    return ^BOOL(NSDictionary<NSString *, id> *parameters) {
-        id <JLRRouteHandlerTarget> createdObject = [[targetClass alloc] initWithRouteParameters:parameters];
-        return completionHandler(createdObject);
-    };
-}
++ (NSArray <NSString *> *)expandOptionalRoutePatternsForPattern:(NSString *)routePattern;
 
 @end
+
+
+NS_ASSUME_NONNULL_END
