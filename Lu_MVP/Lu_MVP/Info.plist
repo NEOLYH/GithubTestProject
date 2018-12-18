@@ -15,7 +15,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>Lu_MVP</string>
+				<string>RootMvp</string>
 			</array>
 		</dict>
 	</array>

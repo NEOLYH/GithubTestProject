@@ -51,7 +51,7 @@ ML_EXPORT_SERVICE(rootUI)
     }
      [self jumpRoutes];
     
-    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
+    [[JLRoutes routesForScheme:@"RootMvp"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
         UIViewController *currentVc = [self currentViewController];
         UIViewController *v = [[NSClassFromString(parameters[@"controller"]) alloc] init];
         [self paramToVc:v param:parameters];
@@ -65,7 +65,7 @@ ML_EXPORT_SERVICE(rootUI)
 
 
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
-    return [[JLRoutes routesForScheme:@"Lu_MVP"] routeURL:url];
+    return [[JLRoutes routesForScheme:@"RootMvp"] routeURL:url];
 }
 
 -(void)jumpRoutes{
@@ -78,12 +78,12 @@ ML_EXPORT_SERVICE(rootUI)
 //        });
 //    });
 //
-    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/:tab" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+    [[JLRoutes routesForScheme:@"RootMvp"] addRoute:@"/:tab" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
         return YES;
     }];
 //
     //    navigation Push规则
-    [[JLRoutes routesForScheme:@"Lu_MVP"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
+    [[JLRoutes routesForScheme:@"RootMvp"] addRoute:@"/push/:controller" handler:^BOOL(NSDictionary<NSString *,NSString *> * _Nonnull parameters) {
         UIViewController *currentVc = [self currentViewController];
         UIViewController *v = [[NSClassFromString(parameters[@"controller"]) alloc] init];
         [self paramToVc:v param:parameters];
