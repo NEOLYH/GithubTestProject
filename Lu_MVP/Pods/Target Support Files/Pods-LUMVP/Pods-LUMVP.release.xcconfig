@@ -1,8 +1,8 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork" "${PODS_CONFIGURATION_BUILD_DIR}/pop"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/MJExtension" "${PODS_CONFIGURATION_BUILD_DIR}/TABAnimated" "${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork" "${PODS_CONFIGURATION_BUILD_DIR}/pop"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork/YTKNetwork.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/pop/pop.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -l"c++" -framework "AFNetworking" -framework "CFNetwork" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "YTKNetwork" -framework "pop"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking/AFNetworking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/MJExtension/MJExtension.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/TABAnimated/TABAnimated.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork/YTKNetwork.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/pop/pop.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -l"c++" -framework "AFNetworking" -framework "CFNetwork" -framework "CoreGraphics" -framework "MJExtension" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "TABAnimated" -framework "YTKNetwork" -framework "pop"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

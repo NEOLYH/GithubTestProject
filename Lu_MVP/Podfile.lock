@@ -14,25 +14,33 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - MJExtension (3.0.15.1)
   - pop (1.0.10)
+  - TABAnimated (1.2.3)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
+  - MJExtension
   - pop
+  - TABAnimated
   - YTKNetwork
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - MJExtension
     - pop
+    - TABAnimated
     - YTKNetwork
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  TABAnimated: a14e565798c41c8041faea9ebd6fe278d4dd7d3e
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 4ab90b7e96b8645efcc01863b6e0b80cca4c5bda
+PODFILE CHECKSUM: e61b50c30cf097f31b14759b3f0f212c364d2f92
 
 COCOAPODS: 1.6.0.beta.1

@@ -18,6 +18,13 @@
 		1846885B21C9DA76007E8DB7 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846885A21C9DA76007E8DB7 /* JLRParsingUtilities.m */; };
 		1846885E21C9DA8A007E8DB7 /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846885D21C9DA8A007E8DB7 /* JLRRouteHandler.m */; };
 		1846886221CA22C5007E8DB7 /* PlaceHolderBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846886121CA22C5007E8DB7 /* PlaceHolderBaseView.m */; };
+		1846886521CA3DBE007E8DB7 /* music_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 1846886421CA3DBE007E8DB7 /* music_list.json */; };
+		1846886821CA4174007E8DB7 /* MusicListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846886721CA4174007E8DB7 /* MusicListTableViewCell.m */; };
+		1846887221CA4235007E8DB7 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846886B21CA4235007E8DB7 /* Track.m */; };
+		1846887321CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887021CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.m */; };
+		1846887421CA4235007E8DB7 /* NAKPlaybackIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887121CA4235007E8DB7 /* NAKPlaybackIndicatorView.m */; };
+		1846887721CA432B007E8DB7 /* MusicEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887621CA432B007E8DB7 /* MusicEntity.m */; };
+		1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887921CA43CB007E8DB7 /* MusicPresenter.m */; };
 		18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB5217E985A0096F82E /* LUSeverDelegate.m */; };
 		18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB8217E9A2B0096F82E /* LUSeviceManager.m */; };
 		18515EBC21813C7E0096F82E /* RootUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EBB21813C7E0096F82E /* RootUIService.m */; };
@@ -79,6 +86,19 @@
 		1846885D21C9DA8A007E8DB7 /* JLRRouteHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLRRouteHandler.m; sourceTree = "<group>"; };
 		1846886021CA22C5007E8DB7 /* PlaceHolderBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceHolderBaseView.h; sourceTree = "<group>"; };
 		1846886121CA22C5007E8DB7 /* PlaceHolderBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceHolderBaseView.m; sourceTree = "<group>"; };
+		1846886421CA3DBE007E8DB7 /* music_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music_list.json; sourceTree = "<group>"; };
+		1846886621CA4174007E8DB7 /* MusicListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicListTableViewCell.h; sourceTree = "<group>"; };
+		1846886721CA4174007E8DB7 /* MusicListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicListTableViewCell.m; sourceTree = "<group>"; };
+		1846886B21CA4235007E8DB7 /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
+		1846886C21CA4235007E8DB7 /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		1846886E21CA4235007E8DB7 /* NAKPlaybackIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAKPlaybackIndicatorView.h; sourceTree = "<group>"; };
+		1846886F21CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAKPlaybackIndicatorContentView.h; sourceTree = "<group>"; };
+		1846887021CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorContentView.m; sourceTree = "<group>"; };
+		1846887121CA4235007E8DB7 /* NAKPlaybackIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NAKPlaybackIndicatorView.m; sourceTree = "<group>"; };
+		1846887521CA432B007E8DB7 /* MusicEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicEntity.h; sourceTree = "<group>"; };
+		1846887621CA432B007E8DB7 /* MusicEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicEntity.m; sourceTree = "<group>"; };
+		1846887821CA43CB007E8DB7 /* MusicPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPresenter.h; sourceTree = "<group>"; };
+		1846887921CA43CB007E8DB7 /* MusicPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPresenter.m; sourceTree = "<group>"; };
 		18515EB4217E985A0096F82E /* LUSeverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeverDelegate.h; sourceTree = "<group>"; };
 		18515EB5217E985A0096F82E /* LUSeverDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUSeverDelegate.m; sourceTree = "<group>"; };
 		18515EB7217E9A2B0096F82E /* LUSeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeviceManager.h; sourceTree = "<group>"; };
@@ -254,6 +274,8 @@
 		18046AFA21927EFB003EF4F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1846886621CA4174007E8DB7 /* MusicListTableViewCell.h */,
+				1846886721CA4174007E8DB7 /* MusicListTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,6 +292,8 @@
 		18046AFC21927F12003EF4F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1846887521CA432B007E8DB7 /* MusicEntity.h */,
+				1846887621CA432B007E8DB7 /* MusicEntity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +301,8 @@
 		18046AFD21927F1F003EF4F8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1846887821CA43CB007E8DB7 /* MusicPresenter.h */,
+				1846887921CA43CB007E8DB7 /* MusicPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -320,6 +346,43 @@
 				1846886121CA22C5007E8DB7 /* PlaceHolderBaseView.m */,
 			);
 			path = PlaceHolder_animation;
+			sourceTree = "<group>";
+		};
+		1846886321CA3D7C007E8DB7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1846886421CA3DBE007E8DB7 /* music_list.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1846886921CA420A007E8DB7 /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				1846886A21CA4235007E8DB7 /* DOUAudioStreamer */,
+				1846886D21CA4235007E8DB7 /* NAKPlaybackIndicatorView */,
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
+		1846886A21CA4235007E8DB7 /* DOUAudioStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				1846886B21CA4235007E8DB7 /* Track.m */,
+				1846886C21CA4235007E8DB7 /* Track.h */,
+			);
+			path = DOUAudioStreamer;
+			sourceTree = "<group>";
+		};
+		1846886D21CA4235007E8DB7 /* NAKPlaybackIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				1846886E21CA4235007E8DB7 /* NAKPlaybackIndicatorView.h */,
+				1846886F21CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.h */,
+				1846887021CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.m */,
+				1846887121CA4235007E8DB7 /* NAKPlaybackIndicatorView.m */,
+			);
+			path = NAKPlaybackIndicatorView;
 			sourceTree = "<group>";
 		};
 		18515EB3217E96CA0096F82E /* Severs */ = {
@@ -369,6 +432,7 @@
 		18CACD1D21782962003C8131 = {
 			isa = PBXGroup;
 			children = (
+				1846886321CA3D7C007E8DB7 /* Data */,
 				18CACD2821782962003C8131 /* Lu_MVP */,
 				18CACD2721782962003C8131 /* Products */,
 				CC1EF523D70AB4B177062D6F /* Pods */,
@@ -389,6 +453,7 @@
 		18CACD2821782962003C8131 /* Lu_MVP */ = {
 			isa = PBXGroup;
 			children = (
+				1846886921CA420A007E8DB7 /* Thirdparty */,
 				18137B8421B0DBA40069CB55 /* Unities */,
 				18137B6B21ABC7060069CB55 /* Transition */,
 				18915AC1219BC9040096452F /* Tools */,
@@ -545,6 +610,7 @@
 				18CACD392178296C003C8131 /* LaunchScreen.storyboard in Resources */,
 				18CACD362178296C003C8131 /* Assets.xcassets in Resources */,
 				18CACD3121782962003C8131 /* Main.storyboard in Resources */,
+				1846886521CA3DBE007E8DB7 /* music_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +663,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LUMVP/Pods-LUMVP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/TABAnimated/TABAnimated.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -605,6 +673,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TABAnimated.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -624,11 +694,14 @@
 				18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */,
 				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
 				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
+				1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */,
 				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
 				18137B9521B0DC450069CB55 /* JLRRouteResponse.m in Sources */,
 				18CACD2E21782962003C8131 /* ViewController.m in Sources */,
+				1846887221CA4235007E8DB7 /* Track.m in Sources */,
 				18137B9321B0DC450069CB55 /* JLRRouteDefinition.m in Sources */,
 				1846885B21C9DA76007E8DB7 /* JLRParsingUtilities.m in Sources */,
+				1846887321CA4235007E8DB7 /* NAKPlaybackIndicatorContentView.m in Sources */,
 				1846885E21C9DA8A007E8DB7 /* JLRRouteHandler.m in Sources */,
 				18137B7421ABE3E10069CB55 /* CircleSpreadAnimator.m in Sources */,
 				1846886221CA22C5007E8DB7 /* PlaceHolderBaseView.m in Sources */,
@@ -640,12 +713,15 @@
 				18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */,
 				18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */,
 				18CACD3C2178296C003C8131 /* main.m in Sources */,
+				1846887421CA4235007E8DB7 /* NAKPlaybackIndicatorView.m in Sources */,
 				18515EBF218142DA0096F82E /* LUAppDelegate.m in Sources */,
 				18A6605C21996808006296FD /* CenterViewController.m in Sources */,
 				18137B9221B0DC450069CB55 /* JLRRouteRequest.m in Sources */,
 				18915AC4219BC93C0096452F /* Utilities.m in Sources */,
 				18137B6E21ABC8AA0069CB55 /* LUInteractiveTransition.m in Sources */,
 				18A6606221996839006296FD /* HomeViewController.m in Sources */,
+				1846887721CA432B007E8DB7 /* MusicEntity.m in Sources */,
+				1846886821CA4174007E8DB7 /* MusicListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

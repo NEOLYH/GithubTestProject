@@ -4,4 +4,6 @@ use_frameworks!
 target 'LUMVP' do
 pod 'pop'
 pod 'YTKNetwork'
+pod 'TABAnimated'
+pod 'MJExtension'
 end
