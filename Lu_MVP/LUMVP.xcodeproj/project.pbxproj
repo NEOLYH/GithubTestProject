@@ -35,11 +35,8 @@
 		18CACD362178296C003C8131 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD352178296C003C8131 /* Assets.xcassets */; };
 		18CACD392178296C003C8131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD372178296C003C8131 /* LaunchScreen.storyboard */; };
 		18CACD3C2178296C003C8131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD3B2178296C003C8131 /* main.m */; };
-		18CACD462178296C003C8131 /* Lu_MVPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD452178296C003C8131 /* Lu_MVPTests.m */; };
-		18CACD512178296C003C8131 /* Lu_MVPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD502178296C003C8131 /* Lu_MVPUITests.m */; };
 		18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD6021787289003C8131 /* MVPTabBarController.m */; };
 		8B66D2EEA0F63FBAF84A745C /* Pods_LUMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */; };
-		DBBB09038317C4C3F032F72C /* Pods_Lu_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D39C6189169E6169D1AADF /* Pods_Lu_MVP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1045230E703B553E526EB9AD /* Pods-Lu_MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lu_MVP.debug.xcconfig"; path = "Target Support Files/Pods-Lu_MVP/Pods-Lu_MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		18137B6C21ABC8AA0069CB55 /* LUInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUInteractiveTransition.h; sourceTree = "<group>"; };
 		18137B6D21ABC8AA0069CB55 /* LUInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUInteractiveTransition.m; sourceTree = "<group>"; };
 		18137B6F21ABD8E60069CB55 /* LUTranstionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUTranstionAnimator.h; sourceTree = "<group>"; };
@@ -115,16 +111,10 @@
 		18CACD3A2178296C003C8131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CACD3B2178296C003C8131 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18CACD412178296C003C8131 /* LUMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUMVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CACD452178296C003C8131 /* Lu_MVPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lu_MVPTests.m; sourceTree = "<group>"; };
-		18CACD472178296C003C8131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CACD4C2178296C003C8131 /* LUMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18CACD502178296C003C8131 /* Lu_MVPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lu_MVPUITests.m; sourceTree = "<group>"; };
-		18CACD522178296C003C8131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CACD5F21787289003C8131 /* MVPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPTabBarController.h; sourceTree = "<group>"; };
 		18CACD6021787289003C8131 /* MVPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPTabBarController.m; sourceTree = "<group>"; };
 		18DF4E2821C8CE2D00B4DF83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		89D39C6189169E6169D1AADF /* Pods_Lu_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lu_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2D864A012635653925AAE65 /* Pods-Lu_MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lu_MVP.release.xcconfig"; path = "Target Support Files/Pods-Lu_MVP/Pods-Lu_MVP.release.xcconfig"; sourceTree = "<group>"; };
 		DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.release.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +125,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBBB09038317C4C3F032F72C /* Pods_Lu_MVP.framework in Frameworks */,
 				8B66D2EEA0F63FBAF84A745C /* Pods_LUMVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,8 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				18CACD2821782962003C8131 /* Lu_MVP */,
-				18CACD442178296C003C8131 /* Lu_MVPTests */,
-				18CACD4F2178296C003C8131 /* Lu_MVPUITests */,
 				18CACD2721782962003C8131 /* Products */,
 				CC1EF523D70AB4B177062D6F /* Pods */,
 				C5CEC0EA5A6DA1117860649A /* Frameworks */,
@@ -420,24 +407,6 @@
 			path = Lu_MVP;
 			sourceTree = "<group>";
 		};
-		18CACD442178296C003C8131 /* Lu_MVPTests */ = {
-			isa = PBXGroup;
-			children = (
-				18CACD452178296C003C8131 /* Lu_MVPTests.m */,
-				18CACD472178296C003C8131 /* Info.plist */,
-			);
-			path = Lu_MVPTests;
-			sourceTree = "<group>";
-		};
-		18CACD4F2178296C003C8131 /* Lu_MVPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				18CACD502178296C003C8131 /* Lu_MVPUITests.m */,
-				18CACD522178296C003C8131 /* Info.plist */,
-			);
-			path = Lu_MVPUITests;
-			sourceTree = "<group>";
-		};
 		18CACD5E21787230003C8131 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,7 +423,6 @@
 		C5CEC0EA5A6DA1117860649A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89D39C6189169E6169D1AADF /* Pods_Lu_MVP.framework */,
 				DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */,
 			);
 			name = Frameworks;
@@ -463,8 +431,6 @@
 		CC1EF523D70AB4B177062D6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1045230E703B553E526EB9AD /* Pods-Lu_MVP.debug.xcconfig */,
-				A2D864A012635653925AAE65 /* Pods-Lu_MVP.release.xcconfig */,
 				DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */,
 				FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */,
 			);
@@ -687,7 +653,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CACD462178296C003C8131 /* Lu_MVPTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +660,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CACD512178296C003C8131 /* Lu_MVPUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
