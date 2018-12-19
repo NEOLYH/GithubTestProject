@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target 'Lu_MVP' do
+target 'LUMVP' do
 pod 'pop'
 pod 'YTKNetwork'
 end

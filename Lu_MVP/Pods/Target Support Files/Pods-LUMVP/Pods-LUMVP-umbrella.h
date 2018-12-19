@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Lu_MVPVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Lu_MVPVersionString[];
+FOUNDATION_EXPORT double Pods_LUMVPVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LUMVPVersionString[];
 
