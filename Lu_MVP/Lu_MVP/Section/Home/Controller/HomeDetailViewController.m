@@ -7,18 +7,36 @@
 //
 
 #import "HomeDetailViewController.h"
+#import "JLRoutes.h"
+#import "JLRRouteResponse.h"
 
-@interface HomeDetailViewController ()
+@interface HomeDetailViewController ()<JLRRouteHandlerTarget>
+@property (nonatomic, copy) NSDictionary <NSString *, id> *parameters;
 
 @end
 
 @implementation HomeDetailViewController
 
+- (instancetype)initWithRouteParameters:(NSDictionary <NSString *, id> *)parameters
+{
+    self = [super init];
+    
+    _parameters = [parameters copy]; // hold on to do something with later on
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
-    // Do any additional setup after loading the view.
+    
+    NSDictionary * dict =  JLRoutes.allRoutes;
+    NSLog(@"kkk:%@",dict);
+    JLRRouteResponse * response =  [JLRRouteResponse invalidMatchResponse];
+   NSDictionary * dict1 =  response.parameters;
+     NSLog(@"qqq:%@",dict1);
 }
+
 
 /*
 #pragma mark - Navigation

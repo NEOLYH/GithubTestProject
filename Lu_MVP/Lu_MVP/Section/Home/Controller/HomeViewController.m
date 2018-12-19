@@ -27,12 +27,11 @@
 }
 
 -(void)go{
-    NSLog(@"456465456");
 
     NSString * url = JLRoutesJumpUrl(@"LUMVPOne", @"HomeDetailViewController", @"123", nil, nil, nil);
     
     if (@available(iOS 10.0, *)) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{} completionHandler:nil];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{@"name":@"456"} completionHandler:nil];
     } else {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     }

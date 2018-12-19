@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeDetailViewController : BaseViewController
-
+@property(nonatomic,strong) NSDictionary * name;
 @end
 
 NS_ASSUME_NONNULL_END
