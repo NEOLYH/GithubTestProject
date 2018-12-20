@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 //是否为有效字典
 +(BOOL)isValidDictionary:(id)object;
 
+//加载本地json数据
++(NSDictionary *)readLocalFileWithName:(NSString *)name;
+
++(NSArray *)readlocaljsonName:(NSString *)name;
+
 @end
 
 NS_ASSUME_NONNULL_END

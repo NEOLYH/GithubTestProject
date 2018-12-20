@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1B8AE3B00AC85EA3FB2C989AD4CC3B6"
-               BlueprintName = "TABAnimated"
+               BlueprintIdentifier = "60FDA1E2D1661CE66AF3E0A96761B122"
+               BlueprintName = "YYCache"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TABAnimated.framework">
+               BuildableName = "YYCache.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

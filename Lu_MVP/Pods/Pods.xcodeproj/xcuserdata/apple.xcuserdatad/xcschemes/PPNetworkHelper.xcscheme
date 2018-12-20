@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1B8AE3B00AC85EA3FB2C989AD4CC3B6"
-               BlueprintName = "TABAnimated"
+               BlueprintIdentifier = "AA954AC78A007DCAEAD4913F8732904C"
+               BlueprintName = "PPNetworkHelper"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "TABAnimated.framework">
+               BuildableName = "PPNetworkHelper.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

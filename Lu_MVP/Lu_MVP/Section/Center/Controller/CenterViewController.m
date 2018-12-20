@@ -7,19 +7,44 @@
 //
 
 #import "CenterViewController.h"
+#import "MusicPresenter.h"
+#import "MusicEntity.h"
+#import "MJExtension.h"
+#import "MusicListView.h"
 
-@interface CenterViewController ()
-
+@interface CenterViewController ()<MusicProtocol>
+@property(nonatomic, strong) MusicPresenter * musicPresenter;
+@property(nonatomic, strong) MusicListView * MusicListView;
 @end
 
 @implementation CenterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.musicPresenter getMusicListWithUrlString:@"" param:@{}];
+    [self.view addSubview:self.MusicListView];
+    
 }
 
+- (void)onGetMusicListSuccess:(id)model{
+    [self.MusicListView configTableViewWithData:model];
+}
+
+-(MusicPresenter *)musicPresenter{
+    if (!_musicPresenter) {
+        _musicPresenter = [[MusicPresenter alloc] init];
+        _musicPresenter.delegate = self;
+    }
+    return _musicPresenter;
+}
+
+-(MusicListView *)MusicListView{
+    if (!_MusicListView) {
+        _MusicListView = [[MusicListView  alloc] initWithFrame:self.view.bounds];
+    }
+    return _MusicListView;
+}
 /*
 #pragma mark - Navigation
 

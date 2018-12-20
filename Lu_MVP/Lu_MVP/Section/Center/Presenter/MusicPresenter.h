@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MusicEntity.h"
+#import "PPNetworkHelper.h"
+
+@protocol MusicProtocol <NSObject>
+
+@optional
+- (void)onGetMusicListSuccess:(id)model;
+- (void)onGetMusicListFail:(NSInteger) errorCode des:(NSString *)des;
+
+@end
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MusicPresenter : NSObject
+@property(nonatomic,weak)id<MusicProtocol>delegate;
+- (void)getMusicListWithUrlString:(NSString *)urlString param:(NSDictionary *)param;
 
 @end
 

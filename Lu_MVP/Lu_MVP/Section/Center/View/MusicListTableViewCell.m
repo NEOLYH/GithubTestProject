@@ -10,6 +10,17 @@
 
 @implementation MusicListTableViewCell
 
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self= [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+    }
+    return self;
+}
+
+-(void)setCellWithModle:(MusicEntity *)mdoel{
+    self.textLabel.text = mdoel.title;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
