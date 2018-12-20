@@ -32,15 +32,17 @@
     return self.data.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 95;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     MusicEntity * model = self.data[indexPath.row];
-    
     MusicListTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:MusicListTableViewCellID forIndexPath:indexPath];
     [cell setCellWithModle:model];
     return cell;
 }
-
 
 -(UITableView *)tableView{
     if (!_tableView) {

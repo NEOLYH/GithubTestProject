@@ -7,4 +7,5 @@ pod 'pop'
 pod 'PPNetworkHelper'
 pod 'TABAnimated'
 pod 'MJExtension'
+pod 'Masonry'
 end

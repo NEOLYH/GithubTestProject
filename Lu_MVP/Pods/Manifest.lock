@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - pop (1.0.10)
   - PPNetworkHelper (0.8.1):
@@ -23,6 +24,7 @@ PODS:
   - YYCache (1.0.4)
 
 DEPENDENCIES:
+  - Masonry
   - MJExtension
   - pop
   - PPNetworkHelper
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Masonry
     - MJExtension
     - pop
     - PPNetworkHelper
@@ -39,12 +42,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNetworkHelper: e893191a73665e9c496c2887fd5ceece9e930bb8
   TABAnimated: a14e565798c41c8041faea9ebd6fe278d4dd7d3e
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: a98b97786cb00c33eafe74adff6bfa6062725a1c
+PODFILE CHECKSUM: 802bf36168c8e68bc59cd6d1b05e7ad44c9625cf
 
 COCOAPODS: 1.6.0.beta.1
