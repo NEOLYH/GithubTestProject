@@ -8,4 +8,9 @@ pod 'PPNetworkHelper'
 pod 'TABAnimated'
 pod 'MJExtension'
 pod 'Masonry'
+#pod 'Lumvp',:path => 'Lumvp.podspec'
+end
+
+target 'Swift' do
+    pod 'SnapKit'
 end

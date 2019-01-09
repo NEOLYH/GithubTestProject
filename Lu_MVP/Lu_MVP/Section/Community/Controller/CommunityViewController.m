@@ -8,26 +8,38 @@
 
 #import "CommunityViewController.h"
 
-@interface CommunityViewController ()
-
+@interface CommunityViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView * communityTableView;
 @end
 
 @implementation CommunityViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell * cell = [[UITableViewCell alloc] init];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+-(UITableView *)communityTableView{
+    if (!_communityTableView) {
+        _communityTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _communityTableView.delegate = self;
+        _communityTableView.dataSource = self;
+    }
+    return _communityTableView;
+}
+
 
 @end

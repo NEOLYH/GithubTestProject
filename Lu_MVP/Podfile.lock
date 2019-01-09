@@ -20,6 +20,7 @@ PODS:
   - PPNetworkHelper (0.8.1):
     - AFNetworking (~> 3.2.0)
     - YYCache (~> 1.0.4)
+  - SnapKit (4.2.0)
   - TABAnimated (1.2.3)
   - YYCache (1.0.4)
 
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - MJExtension
   - pop
   - PPNetworkHelper
+  - SnapKit
   - TABAnimated
 
 SPEC REPOS:
@@ -37,6 +39,7 @@ SPEC REPOS:
     - MJExtension
     - pop
     - PPNetworkHelper
+    - SnapKit
     - TABAnimated
     - YYCache
 
@@ -46,9 +49,10 @@ SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNetworkHelper: e893191a73665e9c496c2887fd5ceece9e930bb8
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   TABAnimated: a14e565798c41c8041faea9ebd6fe278d4dd7d3e
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 802bf36168c8e68bc59cd6d1b05e7ad44c9625cf
+PODFILE CHECKSUM: 3addf4e006b685c4fbdc32712e4a2a4afd6109eb
 
 COCOAPODS: 1.6.0.beta.1

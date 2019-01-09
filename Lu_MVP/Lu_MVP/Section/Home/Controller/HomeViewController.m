@@ -7,46 +7,39 @@
 //
 
 #import "HomeViewController.h"
+#import "AnimateView.h"
 
 @interface HomeViewController ()
-
+@property(nonatomic,strong) AnimateView * animateView;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor brownColor];
+//    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 110)];
+//    button.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:button];
+//    [button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 110)];
-    button.center = self.view.center;
-    button.backgroundColor = [UIColor redColor];
-    [self.view addSubview:button];
-    [button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.animateView];
 }
 
 -(void)go{
-
     NSString * url = JLRoutesJumpUrl(@"LUMVPOne", @"HomeDetailViewController", @"123", nil, nil, nil);
-    
     if (@available(iOS 10.0, *)) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{@"name":@"456"} completionHandler:nil];
-    } else {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     }
-    
-    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark --lazy--
+-(AnimateView *)animateView{
+    if (!_animateView) {
+        _animateView = [[AnimateView alloc] initWithFrame:self.view.bounds];
+        _animateView.backgroundColor = [UIColor whiteColor];
+    }
+    return _animateView;
 }
-*/
 
 @end

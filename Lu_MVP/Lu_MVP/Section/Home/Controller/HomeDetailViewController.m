@@ -31,10 +31,15 @@
     self.view.backgroundColor = [UIColor orangeColor];
     
     NSDictionary * dict =  JLRoutes.allRoutes;
+    NSArray * Arr = [[JLRoutes globalRoutes] routes];
     NSLog(@"kkk:%@",dict);
+    NSLog(@"jjjj:%@",Arr);
     JLRRouteResponse * response =  [JLRRouteResponse invalidMatchResponse];
    NSDictionary * dict1 =  response.parameters;
      NSLog(@"qqq:%@",dict1);
+    
+    NSLog(@"llll:%@",self.parameters);
+    
 }
 
 

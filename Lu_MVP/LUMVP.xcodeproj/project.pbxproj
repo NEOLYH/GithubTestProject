@@ -23,6 +23,7 @@
 		1846887721CA432B007E8DB7 /* MusicEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887621CA432B007E8DB7 /* MusicEntity.m */; };
 		1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887921CA43CB007E8DB7 /* MusicPresenter.m */; };
 		1846888021CB6A7A007E8DB7 /* MusicListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846887F21CB6A7A007E8DB7 /* MusicListView.m */; };
+		184DF61E21E3461100004D76 /* CommunityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DF61D21E3461100004D76 /* CommunityViewModel.m */; };
 		18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB5217E985A0096F82E /* LUSeverDelegate.m */; };
 		18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EB8217E9A2B0096F82E /* LUSeviceManager.m */; };
 		18515EBC21813C7E0096F82E /* RootUIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18515EBB21813C7E0096F82E /* RootUIService.m */; };
@@ -34,6 +35,14 @@
 		18A6605C21996808006296FD /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605B21996808006296FD /* CenterViewController.m */; };
 		18A6605F21996822006296FD /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605E21996822006296FD /* CommunityViewController.m */; };
 		18A6606221996839006296FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6606121996839006296FD /* HomeViewController.m */; };
+		18B13AE421E4343800FBEEE8 /* Community.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AE321E4343800FBEEE8 /* Community.m */; };
+		18B13AEC21E4373900FBEEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AEB21E4373900FBEEE8 /* AppDelegate.swift */; };
+		18B13AEE21E4373900FBEEE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AED21E4373900FBEEE8 /* ViewController.swift */; };
+		18B13AF121E4373900FBEEE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B13AEF21E4373900FBEEE8 /* Main.storyboard */; };
+		18B13AF321E4373D00FBEEE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B13AF221E4373D00FBEEE8 /* Assets.xcassets */; };
+		18B13AF621E4373D00FBEEE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B13AF421E4373D00FBEEE8 /* LaunchScreen.storyboard */; };
+		18B13AFD21E4429800FBEEE8 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AFC21E4429800FBEEE8 /* FileManager.m */; };
+		18B13B4E21E4812200FBEEE8 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B13B4D21E4812200FBEEE8 /* FileManager.swift */; };
 		18CACD2E21782962003C8131 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD2D21782962003C8131 /* ViewController.m */; };
 		18CACD3121782962003C8131 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD2F21782962003C8131 /* Main.storyboard */; };
 		18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD3221782962003C8131 /* Lu_MVP.xcdatamodeld */; };
@@ -41,6 +50,8 @@
 		18CACD392178296C003C8131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD372178296C003C8131 /* LaunchScreen.storyboard */; };
 		18CACD3C2178296C003C8131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD3B2178296C003C8131 /* main.m */; };
 		18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD6021787289003C8131 /* MVPTabBarController.m */; };
+		18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB00F921E58AAB00D0CBA1 /* AnimateView.m */; };
+		7822D2B7A78A61007C2FEA7F /* Pods_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */; };
 		8B66D2EEA0F63FBAF84A745C /* Pods_LUMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +104,8 @@
 		1846887921CA43CB007E8DB7 /* MusicPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPresenter.m; sourceTree = "<group>"; };
 		1846887E21CB6A7A007E8DB7 /* MusicListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicListView.h; sourceTree = "<group>"; };
 		1846887F21CB6A7A007E8DB7 /* MusicListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicListView.m; sourceTree = "<group>"; };
+		184DF61C21E3461100004D76 /* CommunityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityViewModel.h; sourceTree = "<group>"; };
+		184DF61D21E3461100004D76 /* CommunityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityViewModel.m; sourceTree = "<group>"; };
 		18515EB4217E985A0096F82E /* LUSeverDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeverDelegate.h; sourceTree = "<group>"; };
 		18515EB5217E985A0096F82E /* LUSeverDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUSeverDelegate.m; sourceTree = "<group>"; };
 		18515EB7217E9A2B0096F82E /* LUSeviceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUSeviceManager.h; sourceTree = "<group>"; };
@@ -115,6 +128,18 @@
 		18A6605E21996822006296FD /* CommunityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		18A6606021996839006296FD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		18A6606121996839006296FD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		18B13AE221E4343800FBEEE8 /* Community.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Community.h; sourceTree = "<group>"; };
+		18B13AE321E4343800FBEEE8 /* Community.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Community.m; sourceTree = "<group>"; };
+		18B13AE921E4373900FBEEE8 /* Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B13AEB21E4373900FBEEE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18B13AED21E4373900FBEEE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18B13AF021E4373900FBEEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18B13AF221E4373D00FBEEE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18B13AF521E4373D00FBEEE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18B13AF721E4373D00FBEEE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B13AFB21E4429800FBEEE8 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		18B13AFC21E4429800FBEEE8 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		18B13B4D21E4812200FBEEE8 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		18CACD2621782962003C8131 /* LUMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LUMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CACD2C21782962003C8131 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		18CACD2D21782962003C8131 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -128,13 +153,26 @@
 		18CACD4C2178296C003C8131 /* LUMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CACD5F21787289003C8131 /* MVPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPTabBarController.h; sourceTree = "<group>"; };
 		18CACD6021787289003C8131 /* MVPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPTabBarController.m; sourceTree = "<group>"; };
+		18CB00F821E58AAB00D0CBA1 /* AnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateView.h; sourceTree = "<group>"; };
+		18CB00F921E58AAB00D0CBA1 /* AnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateView.m; sourceTree = "<group>"; };
 		18DF4E2821C8CE2D00B4DF83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.release.xcconfig"; path = "Target Support Files/Pods-Swift/Pods-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE2C5ED87210EE284E0FE52 /* Pods-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.debug.xcconfig"; path = "Target Support Files/Pods-Swift/Pods-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.release.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18B13AE621E4373900FBEEE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7822D2B7A78A61007C2FEA7F /* Pods_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CACD2321782962003C8131 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				18046AF321927E63003EF4F8 /* View */,
-				18046AF221927E3E003EF4F8 /* Presenter */,
+				18046AF221927E3E003EF4F8 /* ViewModel */,
 				18046AF121927E0D003EF4F8 /* Controller */,
 				18046AF021927DD9003EF4F8 /* Model */,
 			);
@@ -199,16 +237,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		18046AF221927E3E003EF4F8 /* Presenter */ = {
+		18046AF221927E3E003EF4F8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Presenter;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		18046AF321927E63003EF4F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18CB00F821E58AAB00D0CBA1 /* AnimateView.h */,
+				18CB00F921E58AAB00D0CBA1 /* AnimateView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,8 +256,8 @@
 		18046AF421927E6C003EF4F8 /* Community */ = {
 			isa = PBXGroup;
 			children = (
-				18046AF821927EE2003EF4F8 /* Presenter */,
-				18046AF721927ED8003EF4F8 /* Model */,
+				184DF61B21E3455A00004D76 /* Model */,
+				184DF61A21E3453200004D76 /* ViewModel */,
 				18046AF621927EC9003EF4F8 /* Controller */,
 				18046AF521927EC2003EF4F8 /* View */,
 			);
@@ -227,6 +267,8 @@
 		18046AF521927EC2003EF4F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18B13AE221E4343800FBEEE8 /* Community.h */,
+				18B13AE321E4343800FBEEE8 /* Community.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,20 +280,6 @@
 				18A6605E21996822006296FD /* CommunityViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		18046AF721927ED8003EF4F8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		18046AF821927EE2003EF4F8 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		18046AF921927EEF003EF4F8 /* Center */ = {
@@ -359,6 +387,22 @@
 			path = Thirdparty;
 			sourceTree = "<group>";
 		};
+		184DF61A21E3453200004D76 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				184DF61C21E3461100004D76 /* CommunityViewModel.h */,
+				184DF61D21E3461100004D76 /* CommunityViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		184DF61B21E3455A00004D76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18515EB3217E96CA0096F82E /* Severs */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +414,8 @@
 				18515EBB21813C7E0096F82E /* RootUIService.m */,
 				18515EBD218142DA0096F82E /* LUAppDelegate.h */,
 				18515EBE218142DA0096F82E /* LUAppDelegate.m */,
+				18B13AFB21E4429800FBEEE8 /* FileManager.h */,
+				18B13AFC21E4429800FBEEE8 /* FileManager.m */,
 			);
 			path = Severs;
 			sourceTree = "<group>";
@@ -403,11 +449,34 @@
 			path = Lu_Transition;
 			sourceTree = "<group>";
 		};
+		18B13AEA21E4373900FBEEE8 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				18B13B4C21E4810300FBEEE8 /* Tools */,
+				18B13AEB21E4373900FBEEE8 /* AppDelegate.swift */,
+				18B13AED21E4373900FBEEE8 /* ViewController.swift */,
+				18B13AEF21E4373900FBEEE8 /* Main.storyboard */,
+				18B13AF221E4373D00FBEEE8 /* Assets.xcassets */,
+				18B13AF421E4373D00FBEEE8 /* LaunchScreen.storyboard */,
+				18B13AF721E4373D00FBEEE8 /* Info.plist */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		18B13B4C21E4810300FBEEE8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				18B13B4D21E4812200FBEEE8 /* FileManager.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		18CACD1D21782962003C8131 = {
 			isa = PBXGroup;
 			children = (
 				1846886321CA3D7C007E8DB7 /* Data */,
 				18CACD2821782962003C8131 /* Lu_MVP */,
+				18B13AEA21E4373900FBEEE8 /* Swift */,
 				18CACD2721782962003C8131 /* Products */,
 				CC1EF523D70AB4B177062D6F /* Pods */,
 				C5CEC0EA5A6DA1117860649A /* Frameworks */,
@@ -420,6 +489,7 @@
 				18CACD2621782962003C8131 /* LUMVP.app */,
 				18CACD412178296C003C8131 /* LUMVPTests.xctest */,
 				18CACD4C2178296C003C8131 /* LUMVPUITests.xctest */,
+				18B13AE921E4373900FBEEE8 /* Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -463,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */,
+				4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -472,6 +543,8 @@
 			children = (
 				DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */,
 				FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */,
+				ADE2C5ED87210EE284E0FE52 /* Pods-Swift.debug.xcconfig */,
+				359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -479,6 +552,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18B13AE821E4373900FBEEE8 /* Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18B13AF821E4373D00FBEEE8 /* Build configuration list for PBXNativeTarget "Swift" */;
+			buildPhases = (
+				03C38521F74E466667E87064 /* [CP] Check Pods Manifest.lock */,
+				18B13AE521E4373900FBEEE8 /* Sources */,
+				18B13AE621E4373900FBEEE8 /* Frameworks */,
+				18B13AE721E4373900FBEEE8 /* Resources */,
+				3FDE00C7A5B7CBDE9580BE00 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swift;
+			productName = Swift;
+			productReference = 18B13AE921E4373900FBEEE8 /* Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18CACD2521782962003C8131 /* LUMVP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18CACD552178296C003C8131 /* Build configuration list for PBXNativeTarget "LUMVP" */;
@@ -540,9 +632,13 @@
 		18CACD1E21782962003C8131 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
+					18B13AE821E4373900FBEEE8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					18CACD2521782962003C8131 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -572,11 +668,22 @@
 				18CACD2521782962003C8131 /* LUMVP */,
 				18CACD402178296C003C8131 /* LUMVPTests */,
 				18CACD4B2178296C003C8131 /* LUMVPUITests */,
+				18B13AE821E4373900FBEEE8 /* Swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18B13AE721E4373900FBEEE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B13AF621E4373D00FBEEE8 /* LaunchScreen.storyboard in Resources */,
+				18B13AF321E4373D00FBEEE8 /* Assets.xcassets in Resources */,
+				18B13AF121E4373900FBEEE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CACD2421782962003C8131 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +712,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03C38521F74E466667E87064 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDE00C7A5B7CBDE9580BE00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift/Pods-Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift/Pods-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4A582751DAE942BBE3E8A6ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,6 +815,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18B13AE521E4373900FBEEE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18B13AEE21E4373900FBEEE8 /* ViewController.swift in Sources */,
+				18B13B4E21E4812200FBEEE8 /* FileManager.swift in Sources */,
+				18B13AEC21E4373900FBEEE8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18CACD2221782962003C8131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -672,17 +833,21 @@
 				1846888021CB6A7A007E8DB7 /* MusicListView.m in Sources */,
 				18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */,
 				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
+				18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */,
 				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
 				1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */,
+				184DF61E21E3461100004D76 /* CommunityViewModel.m in Sources */,
 				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
 				18137B9521B0DC450069CB55 /* JLRRouteResponse.m in Sources */,
 				18CACD2E21782962003C8131 /* ViewController.m in Sources */,
 				18137B9321B0DC450069CB55 /* JLRRouteDefinition.m in Sources */,
+				18B13AE421E4343800FBEEE8 /* Community.m in Sources */,
 				1846885B21C9DA76007E8DB7 /* JLRParsingUtilities.m in Sources */,
 				1846885E21C9DA8A007E8DB7 /* JLRRouteHandler.m in Sources */,
 				18137B7421ABE3E10069CB55 /* CircleSpreadAnimator.m in Sources */,
 				1846886221CA22C5007E8DB7 /* PlaceHolderBaseView.m in Sources */,
 				18A6605F21996822006296FD /* CommunityViewController.m in Sources */,
+				18B13AFD21E4429800FBEEE8 /* FileManager.m in Sources */,
 				18137B9121B0DC450069CB55 /* JLRoutes.m in Sources */,
 				18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */,
 				18515EBC21813C7E0096F82E /* RootUIService.m in Sources */,
@@ -731,6 +896,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		18B13AEF21E4373900FBEEE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B13AF021E4373900FBEEE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18B13AF421E4373D00FBEEE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18B13AF521E4373D00FBEEE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		18CACD2F21782962003C8131 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -750,6 +931,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		18B13AF921E4373D00FBEEE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE2C5ED87210EE284E0FE52 /* Pods-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 694LG5K33D;
+				INFOPLIST_FILE = Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lululu.com.Swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18B13AFA21E4373D00FBEEE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 694LG5K33D;
+				INFOPLIST_FILE = Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lululu.com.Swift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		18CACD532178296C003C8131 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -806,6 +1033,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 			};
 			name = Debug;
 		};
@@ -858,6 +1086,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -979,6 +1208,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18B13AF821E4373D00FBEEE8 /* Build configuration list for PBXNativeTarget "Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B13AF921E4373D00FBEEE8 /* Debug */,
+				18B13AFA21E4373D00FBEEE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18CACD2121782962003C8131 /* Build configuration list for PBXProject "LUMVP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
