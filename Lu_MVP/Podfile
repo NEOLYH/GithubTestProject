@@ -9,6 +9,7 @@ pod 'TABAnimated'
 pod 'MJExtension'
 pod 'Masonry'
 #pod 'Lumvp',:path => 'Lumvp.podspec'
+pod 'Graver'
 end
 
 target 'Swift' do

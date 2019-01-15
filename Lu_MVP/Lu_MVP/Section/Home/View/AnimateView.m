@@ -13,10 +13,17 @@
 #import "AnimateView.h"
 
 @interface AnimateView ()
-
+ 
 @end
 
 @implementation AnimateView
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if ([super initWithFrame:frame]) {
+        [self addSubview:self.button];
+    }
+    return self;
+}
 
 -(void)drawRect:(CGRect)rect{
     
@@ -78,10 +85,32 @@
     // 11.绘制三次贝塞尔曲线
     UIBezierPath *path10 = [UIBezierPath bezierPath];
     [path10 moveToPoint:CGPointMake(50, 550)];
-    [path10 addCurveToPoint:CGPointMake(300, 550) controlPoint1:CGPointMake(150, 450) controlPoint2:CGPointMake(250, 600)];
+    [path10 addCurveToPoint:CGPointMake(300, 560) controlPoint1:CGPointMake(150, 480) controlPoint2:CGPointMake(250, 600)];
+    [path10 addQuadCurveToPoint:CGPointMake(350, 500) controlPoint:CGPointMake(450, 500)];
     [path10 stroke];
     
+    CALayer * anyLayer = [[CALayer alloc] init];
+    anyLayer.backgroundColor = [UIColor redColor].CGColor;
+    anyLayer.position = CGPointMake(10, 520);
+    anyLayer.bounds = CGRectMake(0, 0, 8, 8);
+    anyLayer.cornerRadius = 4;
+    [self.layer addSublayer:anyLayer];
+    
+    CAKeyframeAnimation * keyframe = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    keyframe.repeatCount = NSIntegerMax;
+    keyframe.path = path10.CGPath;
+    keyframe.duration = 15;
+    keyframe.beginTime = CACurrentMediaTime() + 1;
+    [anyLayer addAnimation:keyframe forKey:@"keyFrameAnimation"];
     
  }
+
+-(UIButton *)button{
+    if (_button) {
+        _button = [[UIButton alloc] initWithFrame:CGRectMake(10, ScreenHeight - 100, 100, 80)];
+        _button.backgroundColor = [UIColor redColor];
+    }
+    return _button;
+}
 
 @end

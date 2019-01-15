@@ -14,17 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Graver (1.0.0):
+    - SDWebImage (= 4.2.1)
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
   - pop (1.0.10)
   - PPNetworkHelper (0.8.1):
     - AFNetworking (~> 3.2.0)
     - YYCache (~> 1.0.4)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
   - SnapKit (4.2.0)
   - TABAnimated (1.2.3)
   - YYCache (1.0.4)
 
 DEPENDENCIES:
+  - Graver
   - Masonry
   - MJExtension
   - pop
@@ -35,24 +41,28 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Graver
     - Masonry
     - MJExtension
     - pop
     - PPNetworkHelper
+    - SDWebImage
     - SnapKit
     - TABAnimated
     - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Graver: e158dbc27f50fa012b2e8a9b64b7fd4b8f3d9139
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNetworkHelper: e893191a73665e9c496c2887fd5ceece9e930bb8
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   TABAnimated: a14e565798c41c8041faea9ebd6fe278d4dd7d3e
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 3addf4e006b685c4fbdc32712e4a2a4afd6109eb
+PODFILE CHECKSUM: d5e87c815f75afaeb2fa87a83f82ea8d52f24449
 
 COCOAPODS: 1.6.0.beta.1

@@ -18,11 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor brownColor];
-//    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 110)];
-//    button.backgroundColor = [UIColor redColor];
-//    [self.view addSubview:button];
-//    [button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.view addSubview:self.animateView];
 }
 
@@ -38,6 +33,7 @@
     if (!_animateView) {
         _animateView = [[AnimateView alloc] initWithFrame:self.view.bounds];
         _animateView.backgroundColor = [UIColor whiteColor];
+        [_animateView.button addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchUpInside];
     }
     return _animateView;
 }
