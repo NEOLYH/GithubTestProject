@@ -35,6 +35,11 @@
 		18A6605C21996808006296FD /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605B21996808006296FD /* CenterViewController.m */; };
 		18A6605F21996822006296FD /* CommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6605E21996822006296FD /* CommunityViewController.m */; };
 		18A6606221996839006296FD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A6606121996839006296FD /* HomeViewController.m */; };
+		18AF85EB21EDC654007CD834 /* header_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 18AF85EA21EDC654007CD834 /* header_list.json */; };
+		18AF85EF21EDC7B9007CD834 /* CommunityCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF85EE21EDC7B9007CD834 /* CommunityCellData.m */; };
+		18AF85F221EDC92E007CD834 /* CommunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF85F121EDC92E007CD834 /* CommunityModel.m */; };
+		18AF85F521EDCEEF007CD834 /* CommunityEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF85F421EDCEEF007CD834 /* CommunityEngine.m */; };
+		18AF85F821EDD6AD007CD834 /* CommunityContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF85F721EDD6AD007CD834 /* CommunityContentView.m */; };
 		18B13AE421E4343800FBEEE8 /* Community.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AE321E4343800FBEEE8 /* Community.m */; };
 		18B13AEC21E4373900FBEEE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AEB21E4373900FBEEE8 /* AppDelegate.swift */; };
 		18B13AEE21E4373900FBEEE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B13AED21E4373900FBEEE8 /* ViewController.swift */; };
@@ -128,6 +133,15 @@
 		18A6605E21996822006296FD /* CommunityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityViewController.m; sourceTree = "<group>"; };
 		18A6606021996839006296FD /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		18A6606121996839006296FD /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		18AF85EA21EDC654007CD834 /* header_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = header_list.json; sourceTree = "<group>"; };
+		18AF85ED21EDC7B9007CD834 /* CommunityCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityCellData.h; sourceTree = "<group>"; };
+		18AF85EE21EDC7B9007CD834 /* CommunityCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityCellData.m; sourceTree = "<group>"; };
+		18AF85F021EDC92E007CD834 /* CommunityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityModel.h; sourceTree = "<group>"; };
+		18AF85F121EDC92E007CD834 /* CommunityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityModel.m; sourceTree = "<group>"; };
+		18AF85F321EDCEEF007CD834 /* CommunityEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityEngine.h; sourceTree = "<group>"; };
+		18AF85F421EDCEEF007CD834 /* CommunityEngine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityEngine.m; sourceTree = "<group>"; };
+		18AF85F621EDD6AD007CD834 /* CommunityContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommunityContentView.h; sourceTree = "<group>"; };
+		18AF85F721EDD6AD007CD834 /* CommunityContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommunityContentView.m; sourceTree = "<group>"; };
 		18B13AE221E4343800FBEEE8 /* Community.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Community.h; sourceTree = "<group>"; };
 		18B13AE321E4343800FBEEE8 /* Community.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Community.m; sourceTree = "<group>"; };
 		18B13AE921E4373900FBEEE8 /* Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +270,7 @@
 		18046AF421927E6C003EF4F8 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				18AF85EC21EDC767007CD834 /* Class */,
 				184DF61B21E3455A00004D76 /* Model */,
 				184DF61A21E3453200004D76 /* ViewModel */,
 				18046AF621927EC9003EF4F8 /* Controller */,
@@ -376,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				1846886421CA3DBE007E8DB7 /* music_list.json */,
+				18AF85EA21EDC654007CD834 /* header_list.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -399,6 +415,8 @@
 		184DF61B21E3455A00004D76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18AF85F021EDC92E007CD834 /* CommunityModel.h */,
+				18AF85F121EDC92E007CD834 /* CommunityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -447,6 +465,19 @@
 			children = (
 			);
 			path = Lu_Transition;
+			sourceTree = "<group>";
+		};
+		18AF85EC21EDC767007CD834 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				18AF85ED21EDC7B9007CD834 /* CommunityCellData.h */,
+				18AF85EE21EDC7B9007CD834 /* CommunityCellData.m */,
+				18AF85F321EDCEEF007CD834 /* CommunityEngine.h */,
+				18AF85F421EDCEEF007CD834 /* CommunityEngine.m */,
+				18AF85F621EDD6AD007CD834 /* CommunityContentView.h */,
+				18AF85F721EDD6AD007CD834 /* CommunityContentView.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		18B13AEA21E4373900FBEEE8 /* Swift */ = {
@@ -690,6 +721,7 @@
 			files = (
 				18CACD392178296C003C8131 /* LaunchScreen.storyboard in Resources */,
 				18CACD362178296C003C8131 /* Assets.xcassets in Resources */,
+				18AF85EB21EDC654007CD834 /* header_list.json in Resources */,
 				18CACD3121782962003C8131 /* Main.storyboard in Resources */,
 				1846886521CA3DBE007E8DB7 /* music_list.json in Resources */,
 			);
@@ -839,6 +871,7 @@
 				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
 				18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */,
 				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
+				18AF85F821EDD6AD007CD834 /* CommunityContentView.m in Sources */,
 				1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */,
 				184DF61E21E3461100004D76 /* CommunityViewModel.m in Sources */,
 				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
@@ -852,11 +885,14 @@
 				1846886221CA22C5007E8DB7 /* PlaceHolderBaseView.m in Sources */,
 				18A6605F21996822006296FD /* CommunityViewController.m in Sources */,
 				18B13AFD21E4429800FBEEE8 /* FileManager.m in Sources */,
+				18AF85EF21EDC7B9007CD834 /* CommunityCellData.m in Sources */,
 				18137B9121B0DC450069CB55 /* JLRoutes.m in Sources */,
 				18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */,
 				18515EBC21813C7E0096F82E /* RootUIService.m in Sources */,
+				18AF85F521EDCEEF007CD834 /* CommunityEngine.m in Sources */,
 				18137B7121ABD8E60069CB55 /* LUTranstionAnimator.m in Sources */,
 				18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */,
+				18AF85F221EDC92E007CD834 /* CommunityModel.m in Sources */,
 				18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */,
 				18CACD3C2178296C003C8131 /* main.m in Sources */,
 				18515EBF218142DA0096F82E /* LUAppDelegate.m in Sources */,

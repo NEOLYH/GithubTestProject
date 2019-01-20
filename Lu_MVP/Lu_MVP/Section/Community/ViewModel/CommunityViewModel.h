@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Graver/WMGBaseViewModel.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommunityViewModel : NSObject
--(void)communityNetWorkWithUrl:(NSString *)url paramas:(NSDictionary *)paramas success:(void(^)(NSArray * dataArray))success;
+@interface CommunityViewModel: WMGBaseViewModel
+ 
 @end
 
 NS_ASSUME_NONNULL_END

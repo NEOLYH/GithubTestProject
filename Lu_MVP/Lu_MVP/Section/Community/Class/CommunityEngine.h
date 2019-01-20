@@ -1,17 +1,17 @@
 //
-//  Community.h
+//  CommunityEngine.h
 //  LUMVP
 //
-//  Created by apple on 2019/1/8.
+//  Created by apple on 2019/1/15.
 //  Copyright © 2019 apple. All rights reserved.
 //
 
+#import <Graver/WMGBaseEngine.h>
 #import <Foundation/Foundation.h>
-#import <Graver/WMGBaseCell.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Community : WMGBaseCell
+@interface CommunityEngine : WMGBaseEngine
 
 @end
 
