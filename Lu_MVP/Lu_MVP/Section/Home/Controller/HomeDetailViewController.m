@@ -30,15 +30,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor orangeColor];
     
-    NSDictionary * dict =  JLRoutes.allRoutes;
-    NSArray * Arr = [[JLRoutes globalRoutes] routes];
-    NSLog(@"kkk:%@",dict);
-    NSLog(@"jjjj:%@",Arr);
-    JLRRouteResponse * response =  [JLRRouteResponse invalidMatchResponse];
-   NSDictionary * dict1 =  response.parameters;
-     NSLog(@"qqq:%@",dict1);
-    
-    NSLog(@"llll:%@",self.parameters);
+    [[JLRoutes routesForScheme:@"LUMVPOne"]addRoute:@"/:HomeDetailViewController/:userID" handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        
+        NSLog(@"parameters: %@",parameters);
+        NSLog(@"userID: %@",parameters[@"userID"]);
+       
+        NSLog(@"-----第二模块-----");
+        
+        
+        return YES;
+    }];
     
 }
 

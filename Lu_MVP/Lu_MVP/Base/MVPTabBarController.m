@@ -29,13 +29,10 @@
     
     HomeViewController * homeVc  = [[HomeViewController alloc] init];
     MVPNavigationController * navHome = [[MVPNavigationController alloc] initWithRootViewController:homeVc];
-    
     CenterViewController * centerVc = [[CenterViewController alloc] init];
     MVPNavigationController * navCenter = [[MVPNavigationController alloc] initWithRootViewController:centerVc];
-  
     CommunityViewController * commVC = [[CommunityViewController alloc] init];
     MVPNavigationController * navComm  = [[MVPNavigationController alloc] initWithRootViewController:commVC];
-    
     [self addChildViewController:navHome];
     [self addChildViewController:navCenter];
     [self addChildViewController:navComm];
@@ -49,7 +46,7 @@
         if ([head isEqualToString:@"LUMVPOne"]) {
             
             [navHome pushViewController:vc animated:YES];
-           
+            
         }else if ([head isEqualToString:@"LUMVPTwo"]){
             [navCenter pushViewController:vc animated:YES];
             navCenter.hidesBottomBarWhenPushed = YES;
@@ -68,8 +65,9 @@
     
     
     NSArray *dataImageArray = @[
-                                @{@"disableImage":@"tabbar_home",@"image":@"tabbar_home_selected"},@{@"disableImage":@"tabbar_message_center",@"image":@"tabbar_message_center_selected"},
-  @{@"disableImage":@"tabbar_profile",@"image":@"tabbar_profile_selected"}];
+                                @{@"disableImage":@"tabbar_home",@"image":@"tabbar_home_selected",@"name":@"Y符"},
+                                @{@"disableImage":@"tabbar_message_center",@"image":@"tabbar_message_center_selected",@"name":@"Z轴"},
+                                @{@"disableImage":@"tabbar_profile",@"image":@"tabbar_profile_selected",@"name":@"X线"}];
     
     if ([Utilities isValidArray:dataImageArray])
     {
@@ -91,7 +89,7 @@
                                array:(NSArray *)array
                                index:(NSUInteger )index {
     
- 
+    
     if ([Utilities isValidArray:array]) {
         
         controller.tabBarItem.image = [[UIImage imageNamed:[array objectAtIndex:index][@"disableImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] ;

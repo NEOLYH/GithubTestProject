@@ -15,6 +15,7 @@
     return object && [object isKindOfClass:[NSArray class]] && ((NSArray *)object).count;
 }
 
+
 +(NSDictionary *)readLocalFileWithName:(NSString *)name{
     // 获取文件路径
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];

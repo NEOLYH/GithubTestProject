@@ -11,12 +11,20 @@
 #endif
 
 #import "TABAnimated.h"
-#import "TABMethod.h"
+#import "TABAnimatedObject.h"
+#import "TABAnimationMethod.h"
+#import "TABBaseCollectionViewCell.h"
+#import "TABBaseTableViewCell.h"
+#import "TABManagerMethod+ManagerCALayer.h"
+#import "TABManagerMethod.h"
 #import "TABViewAnimated.h"
+#import "UICollectionView+Animated.h"
+#import "UICollectionViewCell+TABLayoutSubviews.h"
 #import "UITableView+Animated.h"
-#import "UITableViewCell+Animated.h"
+#import "UITableViewCell+TABLayoutSubviews.h"
 #import "UIView+Animated.h"
-#import "UIView+TABLayerout.h"
+#import "UIView+TABControlAnimation.h"
+#import "UIView+TABLayoutSubviews.h"
 
 FOUNDATION_EXPORT double TABAnimatedVersionNumber;
 FOUNDATION_EXPORT const unsigned char TABAnimatedVersionString[];

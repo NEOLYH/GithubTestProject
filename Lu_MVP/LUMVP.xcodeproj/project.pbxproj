@@ -58,6 +58,9 @@
 		18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB00F921E58AAB00D0CBA1 /* AnimateView.m */; };
 		7822D2B7A78A61007C2FEA7F /* Pods_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */; };
 		8B66D2EEA0F63FBAF84A745C /* Pods_LUMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */; };
+		DC6F54A2224DB2BB00A4D4A4 /* MUHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A1224DB2BB00A4D4A4 /* MUHomeViewModel.m */; };
+		DC6F54A6224DB30700A4D4A4 /* MUHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */; };
+		DC6F54A9224DBF5400A4D4A4 /* MUHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05B3ADE1C5D884491BB09AB7 /* Pods-LUMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-LUMVP/Pods-LUMVP.release.xcconfig"; sourceTree = "<group>"; };
 		18137B6C21ABC8AA0069CB55 /* LUInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUInteractiveTransition.h; sourceTree = "<group>"; };
 		18137B6D21ABC8AA0069CB55 /* LUInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LUInteractiveTransition.m; sourceTree = "<group>"; };
 		18137B6F21ABD8E60069CB55 /* LUTranstionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LUTranstionAnimator.h; sourceTree = "<group>"; };
@@ -172,9 +176,18 @@
 		18DF4E2821C8CE2D00B4DF83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.release.xcconfig"; path = "Target Support Files/Pods-Swift/Pods-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9632D5B643C2EACD76802C8B /* Pods-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift/Pods-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		ADE2C5ED87210EE284E0FE52 /* Pods-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.debug.xcconfig"; path = "Target Support Files/Pods-Swift/Pods-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		B437DEC44566F9B20CB27726 /* Pods-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift/Pods-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		B6AAE4893C0ABE6A9D2B7BED /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
+		DC6F54A0224DB2BB00A4D4A4 /* MUHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeViewModel.h; sourceTree = "<group>"; };
+		DC6F54A1224DB2BB00A4D4A4 /* MUHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeViewModel.m; sourceTree = "<group>"; };
+		DC6F54A4224DB30700A4D4A4 /* MUHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeModel.h; sourceTree = "<group>"; };
+		DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeModel.m; sourceTree = "<group>"; };
+		DC6F54A7224DBF5400A4D4A4 /* MUHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeTableViewCell.h; sourceTree = "<group>"; };
+		DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeTableViewCell.m; sourceTree = "<group>"; };
 		FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.release.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,19 +238,12 @@
 		18046AEF21927DD0003EF4F8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DC6F54A3224DB2E700A4D4A4 /* Model */,
+				DC6F549F224DB28B00A4D4A4 /* ViewModel */,
 				18046AF321927E63003EF4F8 /* View */,
-				18046AF221927E3E003EF4F8 /* ViewModel */,
 				18046AF121927E0D003EF4F8 /* Controller */,
-				18046AF021927DD9003EF4F8 /* Model */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		18046AF021927DD9003EF4F8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		18046AF121927E0D003EF4F8 /* Controller */ = {
@@ -251,18 +257,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		18046AF221927E3E003EF4F8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		18046AF321927E63003EF4F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				18CB00F821E58AAB00D0CBA1 /* AnimateView.h */,
 				18CB00F921E58AAB00D0CBA1 /* AnimateView.m */,
+				DC6F54A7224DBF5400A4D4A4 /* MUHomeTableViewCell.h */,
+				DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,13 +397,6 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		1846886921CA420A007E8DB7 /* Thirdparty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Thirdparty;
-			sourceTree = "<group>";
-		};
 		184DF61A21E3453200004D76 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,7 +522,6 @@
 		18CACD2821782962003C8131 /* Lu_MVP */ = {
 			isa = PBXGroup;
 			children = (
-				1846886921CA420A007E8DB7 /* Thirdparty */,
 				18137B8421B0DBA40069CB55 /* Unities */,
 				18137B6B21ABC7060069CB55 /* Transition */,
 				18915AC1219BC9040096452F /* Tools */,
@@ -576,8 +569,30 @@
 				FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */,
 				ADE2C5ED87210EE284E0FE52 /* Pods-Swift.debug.xcconfig */,
 				359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */,
+				B6AAE4893C0ABE6A9D2B7BED /* Pods-LUMVP.debug.xcconfig */,
+				05B3ADE1C5D884491BB09AB7 /* Pods-LUMVP.release.xcconfig */,
+				9632D5B643C2EACD76802C8B /* Pods-Swift.debug.xcconfig */,
+				B437DEC44566F9B20CB27726 /* Pods-Swift.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DC6F549F224DB28B00A4D4A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC6F54A0224DB2BB00A4D4A4 /* MUHomeViewModel.h */,
+				DC6F54A1224DB2BB00A4D4A4 /* MUHomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC6F54A3224DB2E700A4D4A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC6F54A4224DB30700A4D4A4 /* MUHomeModel.h */,
+				DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -820,13 +835,17 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LUMVP/Pods-LUMVP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Graver/Graver.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/PPNetworkHelper/PPNetworkHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TABAnimated/TABAnimated.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/info/info.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -834,13 +853,17 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Graver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPNetworkHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QMUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TABAnimated.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/info.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -873,10 +896,12 @@
 				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
 				18AF85F821EDD6AD007CD834 /* CommunityContentView.m in Sources */,
 				1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */,
+				DC6F54A9224DBF5400A4D4A4 /* MUHomeTableViewCell.m in Sources */,
 				184DF61E21E3461100004D76 /* CommunityViewModel.m in Sources */,
 				18915AC0219AACBD0096452F /* MVPNavigationController.m in Sources */,
 				18137B9521B0DC450069CB55 /* JLRRouteResponse.m in Sources */,
 				18CACD2E21782962003C8131 /* ViewController.m in Sources */,
+				DC6F54A6224DB30700A4D4A4 /* MUHomeModel.m in Sources */,
 				18137B9321B0DC450069CB55 /* JLRRouteDefinition.m in Sources */,
 				18B13AE421E4343800FBEEE8 /* Community.m in Sources */,
 				1846885B21C9DA76007E8DB7 /* JLRParsingUtilities.m in Sources */,
@@ -884,6 +909,7 @@
 				18137B7421ABE3E10069CB55 /* CircleSpreadAnimator.m in Sources */,
 				1846886221CA22C5007E8DB7 /* PlaceHolderBaseView.m in Sources */,
 				18A6605F21996822006296FD /* CommunityViewController.m in Sources */,
+				DC6F54A2224DB2BB00A4D4A4 /* MUHomeViewModel.m in Sources */,
 				18B13AFD21E4429800FBEEE8 /* FileManager.m in Sources */,
 				18AF85EF21EDC7B9007CD834 /* CommunityCellData.m in Sources */,
 				18137B9121B0DC450069CB55 /* JLRoutes.m in Sources */,
@@ -1136,9 +1162,11 @@
 			baseConfigurationReference = DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S86CUP55US;
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/MVP-Person/Lu_MVP/Lu_MVP/Tools/PrefixHeader.pch";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 694LG5K33D;
+				GCC_PREFIX_HEADER = "/Users/faith/Desktop/NEOLYH-Github/ABC/Lu_MVP/Lu_MVP/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = Lu_MVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1147,7 +1175,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lululu.com.Lu-MVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1156,9 +1184,11 @@
 			baseConfigurationReference = FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S86CUP55US;
-				GCC_PREFIX_HEADER = "/Users/apple/Desktop/MVP-Person/Lu_MVP/Lu_MVP/Tools/PrefixHeader.pch";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 694LG5K33D;
+				GCC_PREFIX_HEADER = "/Users/faith/Desktop/NEOLYH-Github/ABC/Lu_MVP/Lu_MVP/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = Lu_MVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1167,7 +1197,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "lululu.com.Lu-MVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
