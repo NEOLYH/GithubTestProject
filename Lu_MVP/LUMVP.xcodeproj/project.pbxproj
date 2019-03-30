@@ -55,12 +55,15 @@
 		18CACD392178296C003C8131 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CACD372178296C003C8131 /* LaunchScreen.storyboard */; };
 		18CACD3C2178296C003C8131 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD3B2178296C003C8131 /* main.m */; };
 		18CACD6121787289003C8131 /* MVPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CACD6021787289003C8131 /* MVPTabBarController.m */; };
-		18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB00F921E58AAB00D0CBA1 /* AnimateView.m */; };
 		7822D2B7A78A61007C2FEA7F /* Pods_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */; };
 		8B66D2EEA0F63FBAF84A745C /* Pods_LUMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */; };
+		DC4021DA224F0C1200FC3F16 /* MURollCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4021D9224F0C1200FC3F16 /* MURollCollectionViewCell.m */; };
+		DC4021DD224F124E00FC3F16 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4021DC224F124E00FC3F16 /* UIView+Extention.m */; };
 		DC6F54A2224DB2BB00A4D4A4 /* MUHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A1224DB2BB00A4D4A4 /* MUHomeViewModel.m */; };
 		DC6F54A6224DB30700A4D4A4 /* MUHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */; };
 		DC6F54A9224DBF5400A4D4A4 /* MUHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */; };
+		DC6F54BA224E4B9500A4D4A4 /* MURollScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54B9224E4B9500A4D4A4 /* MURollScrollView.m */; };
+		DC6F54BD224E4BCC00A4D4A4 /* MUPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6F54BC224E4BCC00A4D4A4 /* MUPageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,8 +174,6 @@
 		18CACD4C2178296C003C8131 /* LUMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LUMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CACD5F21787289003C8131 /* MVPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPTabBarController.h; sourceTree = "<group>"; };
 		18CACD6021787289003C8131 /* MVPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPTabBarController.m; sourceTree = "<group>"; };
-		18CB00F821E58AAB00D0CBA1 /* AnimateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimateView.h; sourceTree = "<group>"; };
-		18CB00F921E58AAB00D0CBA1 /* AnimateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateView.m; sourceTree = "<group>"; };
 		18DF4E2821C8CE2D00B4DF83 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		359718A3E75718C6FBB4C28C /* Pods-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift.release.xcconfig"; path = "Target Support Files/Pods-Swift/Pods-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		4EEBBC2ED7074AF90651A010 /* Pods_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,12 +183,20 @@
 		B6AAE4893C0ABE6A9D2B7BED /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		DB177C15AA07F33AEE692285 /* Pods_LUMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LUMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4CFE87BF3E816BC6C6416F /* Pods-LUMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.debug.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4021D8224F0C1200FC3F16 /* MURollCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MURollCollectionViewCell.h; sourceTree = "<group>"; };
+		DC4021D9224F0C1200FC3F16 /* MURollCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MURollCollectionViewCell.m; sourceTree = "<group>"; };
+		DC4021DB224F124E00FC3F16 /* UIView+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extention.h"; sourceTree = "<group>"; };
+		DC4021DC224F124E00FC3F16 /* UIView+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extention.m"; sourceTree = "<group>"; };
 		DC6F54A0224DB2BB00A4D4A4 /* MUHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeViewModel.h; sourceTree = "<group>"; };
 		DC6F54A1224DB2BB00A4D4A4 /* MUHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeViewModel.m; sourceTree = "<group>"; };
 		DC6F54A4224DB30700A4D4A4 /* MUHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeModel.h; sourceTree = "<group>"; };
 		DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeModel.m; sourceTree = "<group>"; };
 		DC6F54A7224DBF5400A4D4A4 /* MUHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeTableViewCell.h; sourceTree = "<group>"; };
 		DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeTableViewCell.m; sourceTree = "<group>"; };
+		DC6F54B8224E4B9500A4D4A4 /* MURollScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MURollScrollView.h; sourceTree = "<group>"; };
+		DC6F54B9224E4B9500A4D4A4 /* MURollScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MURollScrollView.m; sourceTree = "<group>"; };
+		DC6F54BB224E4BCC00A4D4A4 /* MUPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUPageControl.h; sourceTree = "<group>"; };
+		DC6F54BC224E4BCC00A4D4A4 /* MUPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUPageControl.m; sourceTree = "<group>"; };
 		FF944D69D4A3B2D59825C84F /* Pods-LUMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LUMVP.release.xcconfig"; path = "Target Support Files/Pods-LUMVP/Pods-LUMVP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,8 +269,6 @@
 		18046AF321927E63003EF4F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18CB00F821E58AAB00D0CBA1 /* AnimateView.h */,
-				18CB00F921E58AAB00D0CBA1 /* AnimateView.m */,
 				DC6F54A7224DBF5400A4D4A4 /* MUHomeTableViewCell.h */,
 				DC6F54A8224DBF5400A4D4A4 /* MUHomeTableViewCell.m */,
 			);
@@ -435,8 +442,8 @@
 		18915AC1219BC9040096452F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DC6F54B7224E4B5B00A4D4A4 /* MURollView */,
 				1846885F21CA21C7007E8DB7 /* PlaceHolder_animation */,
-				18915ACA219E72210096452F /* Lu_Transition */,
 				18915AC5219E50B70096452F /* Categarys */,
 				18915AC2219BC93C0096452F /* Utilities.h */,
 				18915AC3219BC93C0096452F /* Utilities.m */,
@@ -450,15 +457,10 @@
 			children = (
 				18915AC6219E51160096452F /* UIColor+categary.h */,
 				18915AC7219E51160096452F /* UIColor+categary.m */,
+				DC4021DB224F124E00FC3F16 /* UIView+Extention.h */,
+				DC4021DC224F124E00FC3F16 /* UIView+Extention.m */,
 			);
 			path = Categarys;
-			sourceTree = "<group>";
-		};
-		18915ACA219E72210096452F /* Lu_Transition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lu_Transition;
 			sourceTree = "<group>";
 		};
 		18AF85EC21EDC767007CD834 /* Class */ = {
@@ -593,6 +595,19 @@
 				DC6F54A5224DB30700A4D4A4 /* MUHomeModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DC6F54B7224E4B5B00A4D4A4 /* MURollView */ = {
+			isa = PBXGroup;
+			children = (
+				DC6F54B8224E4B9500A4D4A4 /* MURollScrollView.h */,
+				DC6F54B9224E4B9500A4D4A4 /* MURollScrollView.m */,
+				DC6F54BB224E4BCC00A4D4A4 /* MUPageControl.h */,
+				DC6F54BC224E4BCC00A4D4A4 /* MUPageControl.m */,
+				DC4021D8224F0C1200FC3F16 /* MURollCollectionViewCell.h */,
+				DC4021D9224F0C1200FC3F16 /* MURollCollectionViewCell.m */,
+			);
+			path = MURollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -892,7 +907,6 @@
 				1846888021CB6A7A007E8DB7 /* MusicListView.m in Sources */,
 				18CACD3421782962003C8131 /* Lu_MVP.xcdatamodeld in Sources */,
 				18A66059219967E0006296FD /* BaseViewController.m in Sources */,
-				18CB00FA21E58AAB00D0CBA1 /* AnimateView.m in Sources */,
 				183BD70421B132E30019419B /* HomeDetailViewController.m in Sources */,
 				18AF85F821EDD6AD007CD834 /* CommunityContentView.m in Sources */,
 				1846887A21CA43CB007E8DB7 /* MusicPresenter.m in Sources */,
@@ -917,6 +931,7 @@
 				18515EBC21813C7E0096F82E /* RootUIService.m in Sources */,
 				18AF85F521EDCEEF007CD834 /* CommunityEngine.m in Sources */,
 				18137B7121ABD8E60069CB55 /* LUTranstionAnimator.m in Sources */,
+				DC6F54BD224E4BCC00A4D4A4 /* MUPageControl.m in Sources */,
 				18515EB9217E9A2B0096F82E /* LUSeviceManager.m in Sources */,
 				18AF85F221EDC92E007CD834 /* CommunityModel.m in Sources */,
 				18515EB6217E985A0096F82E /* LUSeverDelegate.m in Sources */,
@@ -927,8 +942,11 @@
 				18915AC4219BC93C0096452F /* Utilities.m in Sources */,
 				18137B6E21ABC8AA0069CB55 /* LUInteractiveTransition.m in Sources */,
 				18A6606221996839006296FD /* HomeViewController.m in Sources */,
+				DC4021DD224F124E00FC3F16 /* UIView+Extention.m in Sources */,
+				DC4021DA224F0C1200FC3F16 /* MURollCollectionViewCell.m in Sources */,
 				1846887721CA432B007E8DB7 /* MusicEntity.m in Sources */,
 				1846886821CA4174007E8DB7 /* MusicListTableViewCell.m in Sources */,
+				DC6F54BA224E4B9500A4D4A4 /* MURollScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

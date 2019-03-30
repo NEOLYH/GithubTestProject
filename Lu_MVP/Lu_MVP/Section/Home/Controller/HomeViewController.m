@@ -12,10 +12,12 @@
 #import "MUHomeViewModel.h"
 #import "MUHomeTableViewCell.h"
 #import <MJRefresh/MJRefresh.h>
+#import "MURollScrollView.h"
 
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,MURollScrollViewDelegate>
 @property(nonatomic, strong)MUHomeViewModel * muHomeViewModel;
 @property(nonatomic, strong)UITableView * listTableView;
+@property(nonatomic, strong)MURollScrollView * headBannerView;
 @end
 
 @implementation HomeViewController
@@ -31,6 +33,14 @@
         [self loadDataWithStates:NO];
     }];
     [self loadDataWithStates:YES];
+    
+    [self initation];
+}
+
+-(void)initation{
+    self.listTableView.tableHeaderView = self.headBannerView;
+    self.headBannerView.onlineImageArray = @[@"https://p1.music.126.net/DRId4yElK6Po15SswbFvrA==/65970697683620.jpg?param=250y250",@"https://p1.music.126.net/suco52xu0lv3dhykrrL_vg==/65970697667610.jpg?param=250y250",@"https://p1.music.126.net/Ajn-819hYNmrj1Atan0UIg==/67070209295390.jpg?param=250y250"];
+    self.headBannerView.autoScrollTimeInterval = 4.0;
 }
 
 -(void)loadDataWithStates:(BOOL)states{
@@ -76,6 +86,13 @@
         _listTableView.dataSource = self;
     }
     return _listTableView;
+}
+
+-(MURollScrollView *)headBannerView{
+    if (!_headBannerView) {
+        _headBannerView = [MURollScrollView rollScrollViewWithFrame:CGRectMake(25, 0, [UIScreen mainScreen].bounds.size.width - 50, 100) delegate:self placeHolderImage:[UIImage imageNamed:@"back"]];
+    }
+    return _headBannerView;
 }
 
 @end
