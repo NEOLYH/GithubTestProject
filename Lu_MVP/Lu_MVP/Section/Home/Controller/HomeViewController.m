@@ -27,23 +27,23 @@
     self.view.backgroundColor = [UIColor brownColor];
     [self.view addSubview:self.listTableView];
     self.listTableView.mj_header = [MJRefreshGifHeader headerWithRefreshingBlock:^{
-        [self loadDataWithStates:YES];
+        [self loadDataWithStates:RefreshPullUp];
     }];
     self.listTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        [self loadDataWithStates:NO];
+        [self loadDataWithStates:RefreshPullDown];
     }];
-    [self loadDataWithStates:YES];
+    [self loadDataWithStates:RefreshNoPull];
     
     [self initation];
 }
 
 -(void)initation{
     self.listTableView.tableHeaderView = self.headBannerView;
-    self.headBannerView.onlineImageArray = @[@"https://p1.music.126.net/DRId4yElK6Po15SswbFvrA==/65970697683620.jpg?param=250y250",@"https://p1.music.126.net/suco52xu0lv3dhykrrL_vg==/65970697667610.jpg?param=250y250",@"https://p1.music.126.net/Ajn-819hYNmrj1Atan0UIg==/67070209295390.jpg?param=250y250"];
+    self.headBannerView.onlineImageArray = self.muHomeViewModel.bannerArray;
     self.headBannerView.autoScrollTimeInterval = 4.0;
 }
 
--(void)loadDataWithStates:(BOOL)states{
+-(void)loadDataWithStates:(RefreshPullStyle)states{
     
     [self.muHomeViewModel loadDataWithState:states completed:^(BOOL isSuccessed) {
         if (isSuccessed) {

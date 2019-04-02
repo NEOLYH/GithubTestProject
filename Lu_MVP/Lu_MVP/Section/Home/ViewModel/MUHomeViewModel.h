@@ -8,19 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+///发起网络请求状态
+typedef  enum : NSUInteger{
+    RefreshPullUp = 0, //刷新
+    RefreshPullDown,   //加载
+    RefreshNoPull      //从缓存中获取数据
+} RefreshPullStyle;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MUHomeViewModel : NSObject
-
 ///视图模型数组
 @property(nonatomic, strong)NSMutableArray * listArray;
 
+///轮播图数据源
+@property(nonatomic, strong)NSMutableArray * bannerArray;
 /**
  加载数据
- @param isPullUp 加载动作刷新 加载
+ @param style 请求状态
  @param completed 完成回调
  */
--(void)loadDataWithState:(BOOL)isPullUp completed:(void(^)(BOOL isSuccessed))completed;
+-(void)loadDataWithState:(RefreshPullStyle)style completed:(void(^)(BOOL isSuccessed))completed;
 
 @end
 

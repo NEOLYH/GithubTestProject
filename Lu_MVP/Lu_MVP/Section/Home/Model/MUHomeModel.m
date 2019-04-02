@@ -7,8 +7,13 @@
 //
 
 #import "MUHomeModel.h"
+@interface MUHomeModel () 
+
+@end
 
 @implementation MUHomeModel
+
+
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
