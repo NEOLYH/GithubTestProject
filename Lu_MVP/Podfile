@@ -3,18 +3,17 @@ use_frameworks!
 
 target 'LUMVP' do
 pod 'pop'
-#pod 'YTKNetwork'
 pod 'PPNetworkHelper'
 pod 'TABAnimated'
 pod 'MJExtension'
 pod 'Masonry'
-#pod 'Lumvp',:path => 'Lumvp.podspec'
 pod 'Graver'
 pod 'info'
-pod 'QMUIKit'
-#pod 'YYKit'
+pod 'MUKit/popupView'
+pod 'MUKit/ImageCache'
 pod 'ChameleonFramework'
 pod 'MJRefresh'
+pod 'WoodPeckeriOS', :configurations => ['Debug']
 end
 
 target 'Swift' do

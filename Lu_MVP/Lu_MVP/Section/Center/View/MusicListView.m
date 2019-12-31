@@ -19,7 +19,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self addSubview:self.tableView];
-        
+    
     }
     return self;
 }
@@ -51,6 +51,7 @@
         _tableView.dataSource = self;
         [_tableView registerClass:[MusicListTableViewCell class] forCellReuseIdentifier:MusicListTableViewCellID];
         _tableView.tableFooterView = [UIView new];
+      
     }
     return _tableView;
 }

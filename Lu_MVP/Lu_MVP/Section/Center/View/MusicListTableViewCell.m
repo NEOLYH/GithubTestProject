@@ -8,10 +8,13 @@
 
 #import "MusicListTableViewCell.h"
 #import "Masonry.h"
+#import "UIImageView+MUCache.h"
 
 @interface MusicListTableViewCell()
 @property(nonatomic, strong) UILabel * titleLable;
 @property(nonatomic, strong) UILabel * contentLable;
+@property(nonatomic, strong) UILabel * articleLable;
+@property(nonatomic, strong) UIImageView * musicLogo;
 @end
 
 @implementation MusicListTableViewCell
@@ -24,23 +27,39 @@
 }
 
 -(void)setUpcell{
-    [self addSubview:self.titleLable];
-    [self addSubview:self.contentLable];
+    [self.contentView addSubview:self.musicLogo];
+    [self.contentView addSubview:self.titleLable];
+    [self.contentView addSubview:self.contentLable];
+    [self.contentView addSubview:self.articleLable];
     
-    [self.titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self).offset(10);
-        make.left.mas_equalTo(self).offset(50);
+    [self.musicLogo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.contentView);
+        make.left.mas_equalTo(self.contentView).offset(20);
+        make.top.mas_equalTo(self.contentView).offset(10);
+        make.bottom.mas_equalTo(self.contentView).offset(-10);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(80);
     }];
     
-    [self.contentLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.titleLable.mas_bottom).offset(10);
-        make.left.mas_equalTo(self).offset(50);
-    }];
+    
+//    [self.titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.contentView).offset(10);
+//        make.left.mas_equalTo(self.contentView).offset(50);
+//    }];
+//
+//    [self.contentLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.contentView.titleLable.mas_bottom).offset(10);
+//        make.left.mas_equalTo(self.contentView).offset(50);
+//    }];
+    
+
 }
 
 -(void)setCellWithModle:(MusicEntity *)mdoel{
-    self.textLabel.text = mdoel.title;
-    self.contentLable.text = mdoel.artist;
+//    self.textLabel.text = mdoel.title;
+//    self.contentLable.text = mdoel.artist;
+//    [self.musicLogo sd_setImageWithURL:[NSURL URLWithString:mdoel.pic]];
+    [self.musicLogo setImageURLString:mdoel.pic placeHolderImageName:@"back" cornerRadius:12];
 }
 
 -(UILabel *)titleLable{
@@ -57,6 +76,13 @@
         _contentLable = [[UILabel alloc] init];
     }
     return _contentLable;
+}
+
+-(UIImageView *)musicLogo{
+    if (!_musicLogo) {
+        _musicLogo = [[UIImageView alloc] init];
+    }
+    return _musicLogo;
 }
 
 - (void)awakeFromNib {

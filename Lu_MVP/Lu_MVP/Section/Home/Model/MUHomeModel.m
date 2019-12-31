@@ -13,8 +13,6 @@
 
 @implementation MUHomeModel
 
-
-
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {
     return @{
@@ -28,7 +26,4 @@
              @"artists_name":@"artists.name",
              };
 }
-
-
-
 @end

@@ -21,6 +21,7 @@
 #import "Utilities.h"
 #import "JLRoutes.h"
 #import <objc/runtime.h>
+#import "TABAnimated.h"
 
 @interface RootUIService ()
 {
@@ -40,7 +41,7 @@ ML_EXPORT_SERVICE(rootUI)
     application.delegate.window.backgroundColor = [UIColor whiteColor];
     [self runApp];
     [application.delegate.window makeKeyAndVisible];
-    
+    [[TABViewAnimated sharedAnimated] initWithOnlySkeleton];
     if(!ISIOS7)
     {
         application.statusBarStyle = UIStatusBarStyleLightContent;
